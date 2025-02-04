@@ -52,3 +52,29 @@ This will reduce the traffic sent to the less effective variant over the lifetim
 
 Image [source](https://aws.amazon.com/blogs/machine-learning/dynamic-a-b-testing-for-machine-learning-models-with-amazon-sagemaker-mlops-projects/)
 
+
+## Multi-Armed Bandit Testing
+* In machine learning, a "multi-armed bandit" is essentially a more sophisticated version of A/B testing that leverages machine learning algorithms to dynamically allocate traffic to different variations of a product or feature, prioritizing the ones performing best in real-time, allowing for faster optimization and maximizing the desired outcome compared to traditional A/B testing where traffic is split evenly across variations throughout the experiment.
+* Differences between A/B testing and MAB testing:
+
+  1. **A/B Testing**
+    * Compares two distinct versions (A and B) of a product or feature by splitting users into equal groups and measuring the performance of each variation. 
+    * Provides a clear understanding of which variant is better, but can be slower as it requires a large sample size to reach statistically significant results.
+ 
+  2. **Multi-Armed Bandit (MAB)**
+    * Represents a scenario where you have multiple "arms" (variations) with **unknown reward probabilities**, and the goal is to maximize your cumulative reward by strategically choosing which arm to pull based on real-time performance data. 
+    * Uses machine learning algorithms to dynamically adjust the allocation of traffic to different variations, favoring those performing better and gradually reducing exposure to underperforming variants. 
+    * Focuses on maximizing the overall reward during the experiment, not just identifying the best variant with absolute certainty.
+ 
+
+### When to use MAB instead of "vanilla" A/B testing
+1. **Fast optimization**
+   * When you need to quickly identify the best performing variant(s), especially in situations with high traffic or where user behavior can change rapidly in your application(s).
+
+2. **Personalization**
+   * When you want to tailor the experience to individual users based on their real-time behavior. 
+
+3. **Limited data**
+   * When you have a limited amount of user data and need to learn quickly. 
+
+
