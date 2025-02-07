@@ -1,5 +1,5 @@
 # Multi Armed Bandits Testing
-* MAB heavily depends on two concepts: `exploration` and exploitation.` 
+* MAB heavily depends on two concepts: `exploration` and `exploitation`.
 
 1. Exploration
    * This is a concept where the model explores the statistically significant results, as what is commonly seen in A/B testing.
