@@ -13,6 +13,14 @@
   * b. Custom LLMs
       * Build your own LLM from scratch!
       * Significant resources are required (e.g. training data, compute resources, etc..)
+   
+  * Great post from hugging face on linked-in about model size vs. performance and cost:
+
+![image](https://github.com/user-attachments/assets/14fe766a-efeb-4911-81ea-739e54406ea9)
+
+
+
+
 3. **3 Main Tasks**
   * a. Prompt Engineering
   * b. Fine Tuning
