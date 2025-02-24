@@ -71,3 +71,13 @@ Data Ingestion —> Data pre-processing —> Model Training & Evaluation —> Mo
       * Automatically sends email alerts, slack alerts, etc…
   * Retry Mechanism
       * Based on pre-defined rules-logic it will retry the task(s) that failed again. 
+
+
+
+
+
+
+# References & Resources
+* [A Guide to MLOps with Airflow and MLflow](https://medium.com/thefork/a-guide-to-mlops-with-airflow-and-mlflow-e19a82901f88)
+* [Airflow MLOps documentation](https://airflow.apache.org/use-cases/mlops/)
+* [MLOps github](https://chicagodatascience.github.io/MLOps/logistics/)
