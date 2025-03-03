@@ -17,7 +17,10 @@
 8. Difference in Ratio of Error Types
 9. ...etc..
 ```
-
+* Specific Python Libraries
+  1. [SHAP](https://shap.readthedocs.io/en/latest/)
+  2. [LIME](https://medium.com/@shreeraj260405/hands-on-lime-practical-implementation-for-image-text-and-tabular-data-95566da87f57)
+  3. [ELI5](https://eli5.readthedocs.io/en/latest/)
 
 # Resources
 1. [AI Fairness 360 - AIF360 by IBM](https://github.com/Trusted-AI/AIF360)
@@ -41,3 +44,5 @@
 7. [Holistic AI - Bias and Fairness detection in AI](https://www.holisticai.com/use-case/ai-bias-assessment)
 
 8. [Google's what-if tool](https://pair-code.github.io/what-if-tool/)
+
+9. [Unveiling the Black Box: A Comprehensive Journey into Explainable AI](https://medium.com/epochiiits/unveiling-the-black-box-a-comprehensive-journey-into-explainable-ai-fd0bd017b70c)
