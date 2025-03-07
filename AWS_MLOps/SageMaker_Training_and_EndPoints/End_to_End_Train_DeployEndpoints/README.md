@@ -1,6 +1,9 @@
-## End To End Sagemaker Project
+## End To End Sagemaker Train and Deploy Endpoint
 * By Adam Lang
 * Date: 3/6/2025
+
+## Overview
+* This is an example using a Random Forest Classifier of setting up a training job with deployment to a Sagemaker endpoint on AWS.
 
 # Steps to setup
 1. Create virtual environment: `conda create -p venv python==3.10 -y`
