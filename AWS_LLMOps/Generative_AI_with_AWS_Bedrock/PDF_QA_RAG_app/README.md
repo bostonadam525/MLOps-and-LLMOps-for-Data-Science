@@ -13,4 +13,7 @@
     3) Install requirements.txt file: `pip install -r requirements.txt`
     4) Setup AWS CLI config: make sure you aws CLI is downloaded and run: `aws configure`.
 
-## `claude
+## `claude_sonnet_bedrock.py`
+* This is a simple application that interacts with the AWS Bedrock API with the AWS CLI config and Claude-3.5-Sonnet LLM.
+* The current prompt asks Claude to write a sonnet or poem.
+* Setup is the same as above. 
