@@ -1,0 +1,10 @@
+boto3
+awscli
+botocore
+certifi
+pypdf 
+langchain
+langchain-community
+langchain-aws
+streamlit
+faiss-cpu
