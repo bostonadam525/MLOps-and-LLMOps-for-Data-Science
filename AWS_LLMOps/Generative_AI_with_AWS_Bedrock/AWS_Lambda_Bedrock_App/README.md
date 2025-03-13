@@ -13,6 +13,14 @@
 ## AWS Lambda
 * AWS Lambda is a serverless compute service, offering automatic scaling and pay-as-you-go pricing, while EC2 provides virtual servers with full control and flexibility, making Lambda better for **event-driven, short-running tasks** vs EC2 for long-running, resource-intensive applications.
 
+### How to Create Lambda functions in AWS
+1. Click “Create function” 
+2. Select “author from scratch” vs. “use a blueprint” vs. “container image” depending on your use case
+3. Give lambda function a name: adamBedrockDataSciTestApp
+4. Choose runtime —> e.g. Python 3.12
+5. Architecture —> defaults to `x_86_64`
+6. Create Function
+
 
 ### When to Choose Lambda vs. EC2? 
 1. **Choose Lambda if:**
