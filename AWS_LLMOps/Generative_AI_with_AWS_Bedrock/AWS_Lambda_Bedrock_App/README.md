@@ -8,3 +8,21 @@
 
 ![image](https://github.com/user-attachments/assets/6f35e329-1151-4498-a8b6-9a1b3c8b3db6)
 
+
+
+## AWS Lambda
+* AWS Lambda is a serverless compute service, offering automatic scaling and pay-as-you-go pricing, while EC2 provides virtual servers with full control and flexibility, making Lambda better for **event-driven, short-running tasks** vs EC2 for long-running, resource-intensive applications.
+
+
+### When to Choose Lambda vs. EC2? 
+1. **Choose Lambda if:**
+  * You need a serverless solution for event-driven tasks. 
+  * You want to minimize infrastructure management. 
+  * You need automatic scaling. 
+  * Cost is a major concern, especially for intermittent workloads. 
+
+2. **Choose EC2 if:**
+* You need full control over your infrastructure. 
+* You have long-running applications or resource-intensive workloads. 
+* You need to run specific operating systems or software. 
+* You need more flexibility in terms of storage and networking. 
