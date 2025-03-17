@@ -23,7 +23,7 @@
 # Agent Automation
 * The great thing about the agent framework in Bedrock is that it can orchestrate and automate multiple actions within the Generative AI pipeline as seen in this diagram below.
 
-![image](https://github.com/user-attachments/assets/280c60cb-814c-4f61-8f27-14553f1549a9)
+![image](https://github.com/user-attachments/assets/d34caa89-02f5-4b18-9b1a-95aa1f0a04b0)
 
 
 # Agentic Workflow with Knowledge Bases: Action Groups & Knowledge Bases
