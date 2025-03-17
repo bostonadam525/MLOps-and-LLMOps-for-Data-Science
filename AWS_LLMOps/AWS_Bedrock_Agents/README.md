@@ -47,3 +47,5 @@
  
 ## Agentic Knowledge base workflow
 * There are times when a user's query may not need an Action group but rather a search and retrieval from the document store in your knowledge base. 
+
+![image](https://github.com/user-attachments/assets/c29398d5-9505-43a4-bc33-1177db22e681)
