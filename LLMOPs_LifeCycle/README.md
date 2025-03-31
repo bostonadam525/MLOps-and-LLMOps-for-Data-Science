@@ -53,3 +53,18 @@
 5. Optimization: Cost AND Latency
 6. Version Control: LLM model maintenance --> cost, quality, safety, efficiency
 7. Feedback incorporation: human feedback included in training data and fine-tuning over time.
+
+
+# LLMOPs Pipelines
+* Depending on the complexity of your application there are generally 3 main pipelines
+* Source: Paul Iusztin, Alexandru Răzvanț and Pau Labarta Bajo
+1. **Features Pipeline**
+
+![image](https://github.com/user-attachments/assets/82cecf30-9c3c-4c35-be48-ca4ae36f69bf)
+
+2. **Training Pipeline**
+
+![image](https://github.com/user-attachments/assets/211854be-6aea-47a7-95f2-bc10cafc249d)
+
+3. **Inference Pipeline**
+![image](https://github.com/user-attachments/assets/4f87b891-484e-48f6-b101-a424d518dcc3)
