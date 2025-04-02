@@ -89,3 +89,44 @@ KV-Cache size per token = 2 * torch_dtype * num_hidden_layers * hidden_size
 
 
 
+## Selecting an Instance Type based on Memory
+* So for this model Llama-2-13B we will consider 2 instance types based on these calculations above we need a **minimum of 46 GB of memory**, so these instance types would be appropriate:
+  1. `ml.g5.2xlarge` --> 4 NVIDIA GPUs & 96GB VRAM
+  2. `ml.g5.4xlarge`
+ 
+## Working with the ml.g5.12xlarge - 96GB
+* With this GPU instance type we get 4 NVIDIA GPUs each with 24GB.
+* You obviously can't fit a 46GB model into any 1 of these GPUs by itself because cuda will run out of memory.
+  * Even if you selected a larger device such as: A100 or H100 the model still would not fit.
+ 
+![image](https://github.com/user-attachments/assets/53ca07fa-e3a4-4a0e-a5af-284075469f87)
+
+* You will need to SHARD the model to fit the model into 2 GPU devices. This means:
+  * Number of shards = 2
+  * Batch size = 4
+* This will utilize 2 of the 24GB GPUs and leave 2 GPUs idle.
+
+![image](https://github.com/user-attachments/assets/b2dd5024-d187-4c38-adfa-5670f6c85a50)
+
+
+## Container Selection - Large Model Inference Container
+* (Reference AWS)
+1. Single container that could support TP/PP, compilation and optimization for LARGE models.
+2. Optimized env with minimal setup
+3. Distributed Frameworks
+   * Support Hugging Face
+   * NeuronX
+   * DeepSpeed
+   * vLLM
+   * TensorRTLLM
+ 4. Model Server:
+    * DJLServing -- multi-process execution w/ auto-scaling and UI
+ 5. LLM optimization
+    * loading speedups
+    * compilation
+    * quantization is built-in
+  6. Different Batch mode
+     * Static/Dynamic batch
+     * Continuous batching
+  7. Zero code setup
+     * Writing code or without writing code
