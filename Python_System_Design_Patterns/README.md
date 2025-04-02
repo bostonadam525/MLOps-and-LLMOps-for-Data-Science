@@ -126,3 +126,14 @@
      * All modules in python act as singletons.
     
 ![image](https://github.com/user-attachments/assets/4209362d-98ce-492b-9b87-04814de3152f)
+
+
+4. Builder
+   * Solution to anti-pattern called "telescoping constructor."
+   * The telescoping constructor occurs when a developer builds an object with TOO MANY constructors.
+   * The builder pattern removes unnecessary complexity by partitioning a complex object into 4 different roles:
+     1. Director --> builds product
+     2. Abstract Builder - interfaces for building object
+     3. Concrete Builder - implements the interfaces for abstract builder
+     4. Product - object being built!
+   * Polymorphism is not relied on here. The focus is reducing the complexity via "divide and conquer". 
