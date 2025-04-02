@@ -115,3 +115,14 @@
     
 2. Abstract Factory
    * User expectation is multiple related objects at a given time. 
+
+3. Singleton
+   * When you want to allow only 1 object to be created from a class.
+   * OOP way of creating global variables.
+   * Similar concept called "Borg" exists in python. Borg allows multiple object instances that share the same attribute values --- Borg is short for "Cyborg" from Star Trek.
+   * **Why would you need this???**
+     * Use Case: Lets say you need to store a cache of information that is shared by multiple objects.
+     * If you keep this in 1 single object (singleton) or Borg, you don't have to keep retrieving it each time.
+     * All modules in python act as singletons.
+    
+![image](https://github.com/user-attachments/assets/4209362d-98ce-492b-9b87-04814de3152f)
