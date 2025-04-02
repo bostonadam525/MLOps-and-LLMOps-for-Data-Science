@@ -137,3 +137,15 @@
      3. Concrete Builder - implements the interfaces for abstract builder
      4. Product - object being built!
    * Polymorphism is not relied on here. The focus is reducing the complexity via "divide and conquer". 
+
+5. Prototype
+   * Clones objects according to a prototypical instance.
+   * "Abstract Factory" is most similar to this. 
+   * The key here is that "cloning" means making a copy NOT building something.
+   * How is this useful?
+     * 1. Solves problem of creating many identical objects individually which is expensive in cost and compute power.
+     * 2. Cloning is a good alternative as it makes a "carbon copy" in computational memory rather then creating individual objects one at a time.
+          * Saves compute memory and prevents building multiple class constructors. 
+   * How do we do this?
+      * 1. First create a prototype instance
+      * 2. Clone the prototype when you need a copy/replica
