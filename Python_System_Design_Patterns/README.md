@@ -149,3 +149,18 @@
    * How do we do this?
       * 1. First create a prototype instance
       * 2. Clone the prototype when you need a copy/replica
+
+
+
+# Structural Patterns
+1. Decorator
+   * Allows user to add new features to existing objects without changing structures.
+   * Problem/Challenge:
+     * Add new feature to existing object
+     * Allow dynamic changes
+     * DO NOT use subclassing
+   * Solution
+     * Utilize functions which are objects in python.
+     * Built-in decorator feature function allows us to do this.
+    
+2. Proxy
