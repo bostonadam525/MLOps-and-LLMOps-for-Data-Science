@@ -33,4 +33,14 @@
   * This blogpost entitled [DSPy: In-Context Learning for Extreme Multi-Label Classification](https://training.continuumlabs.ai/knowledge/retrieval-augmented-generation/dspy-in-context-learning-for-extreme-multi-label-classification) by Continuum Labs is another excellent resource.
  
 
-## Monolithic LLMs
+# Unsupervised vs. Semi-Supervised vs. Self-Supervised Learning
+* These concepts are all machine learning frameworks but are related to DSPy which is why they are here.
+* All 3 frameworks can be used for information extraction, classification, and working with data that is either unlabeled or partially labeled.
+* Generally speaking, Unsupervised and Self-Supervised Learning are often used for generating labels for training Supervised Machine Learning algorithms.
+
+## Self-Supervised Learning
+  * Chain of Thought Prompting where you give a zero shot or few shot example prompting to an LLM and ask it to generate labels or classification is a form of self-supervised learning.
+  * DSPy (Declarative Self-improving Python) is a framework that uses a self-improving approach to optimize language model pipelines, which can be seen as a form of self-supervised learning, where the system learns to improve its performance without explicit labels.
+
+
+## Semi-Supervised Learning
