@@ -37,10 +37,27 @@
 * DSPy's modularity is to be able to **optimize prompts and LLMs to get the best outputs all the time.**
 
 ### What exactly are Signatures in DSPy?
-* Building your prompts from Signature variables makes it MUCH easier to:
+* Building your prompts from Signature variables which provide prompt templates makes it MUCH easier to:
   * Create prompts
   * Modify and update prompts
-* Just about ANY NLP task can be implemented via Signatures which are fully optimized to output better results. 
+  * Define and control behaviors of each module in your program
+  * Define semantic roles
+* Just about ANY NLP task can be implemented via Signatures which are fully optimized to output better results.
+
+### What types of Signatures are there?
+1. **Inline Signatures**
+   * These are used directly inside modules.
+   * Format is generally: `Input --> Output`
+2. **Class Signatures**
+   * These always start with a `Docstring` which hints the task of the class.
+   * Descriptive arguments give hints of the input fields.
+   * Descriptive arguments with constraints are given related to the output fields.
+
+### How do Signatures help with programming?
+1. Easily allows you to represent your programs as object oriented classes.
+2. Easily assign variables.
+3. Programmaticaly modify prompting rather than individual strings.
+4. Can be easily used within modules as Classes.
 
 ### What are Signatures integrated with?
 * The Signatures module is fully integrated within DSPy with such modules as:
@@ -51,8 +68,6 @@
   5. `MultiChainComparison`
   6. `Majority`
 
-
-### 
 
 # What are the use cases for DSPy?
 * Various NLP tasks are available:
