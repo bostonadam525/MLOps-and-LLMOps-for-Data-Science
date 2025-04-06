@@ -30,7 +30,31 @@
 6. Optimizers
 7. Assertions
 
-## What are the use cases for DSPy?
+
+## Signatures in DSPy
+* DSPy uses a "modular" approach to programming for each task completion.
+* Modular programming is a paradigm many people know to better organize programs and applications using functions, classes, methods and objects.
+* DSPy's modularity is to be able to **optimize prompts and LLMs to get the best outputs all the time.**
+
+### What exactly are Signatures in DSPy?
+* Building your prompts from Signature variables makes it MUCH easier to:
+  * Create prompts
+  * Modify and update prompts
+* Just about ANY NLP task can be implemented via Signatures which are fully optimized to output better results. 
+
+### What are Signatures integrated with?
+* The Signatures module is fully integrated within DSPy with such modules as:
+  1. `Predict`
+  2. `ChainOfThought`
+  3. `React`
+  4. `ProgramOfThought`
+  5. `MultiChainComparison`
+  6. `Majority`
+
+
+### 
+
+# What are the use cases for DSPy?
 * Various NLP tasks are available:
   1. Question-Answering workflows
   2. Building LLM driven Classification Models
@@ -44,6 +68,7 @@
   10. Image Generation Prompt iteration
   11. Output Refinement
   12. Debugging & Observability
+ 
 
 ## Extreme Multi-label Classification
 * What do you do when you have a very large number of possible classes in a dataset and you don't have a ground truth dataset/corpus?.
@@ -55,7 +80,7 @@
   * This blogpost entitled [DSPy: In-Context Learning for Extreme Multi-Label Classification](https://training.continuumlabs.ai/knowledge/retrieval-augmented-generation/dspy-in-context-learning-for-extreme-multi-label-classification) by Continuum Labs is another excellent resource.
  
 
-# Unsupervised vs. Semi-Supervised vs. Self-Supervised Learning
+# Comparing Unsupervised vs. Semi-Supervised vs. Self-Supervised Learning
 * These concepts are all machine learning frameworks but are related to DSPy which is why they are here.
 * All 3 frameworks can be used for information extraction, classification, and working with data that is either unlabeled or partially labeled.
 * Generally speaking, Unsupervised and Self-Supervised Learning are often used for generating labels for training Supervised Machine Learning algorithms.
