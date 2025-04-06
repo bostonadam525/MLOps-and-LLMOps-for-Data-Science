@@ -2,19 +2,6 @@
 * The amazing concept here is instead of solely relying on prompting methods, you are able to write modular Python code and use DSPy to teach your LLM to produce high-quality and more precise outputs. 
 * DSPy is a really cool framework for programming—rather than prompting—language models that came out of Stanford University.
 * It allows you to iterate faster and build more modular AI systems.
-* The package also has algorithms out of the box for optimizing prompts and weights, which can be used whether you are:
-  1. Building LLM driven Classification Models
-  2. RAG pipelines (simple to very sophisticated)
-  3. Agentic workflows and applications including finetuning Agents
-  4. Reasoning (e.g. Chain of Thought)
-  5. Entity Extraction (e.g. Named Entity Recognition or NER)
-  6. Classification Finetuning
-  7. Multi-Hop Search
-  8. Privacy-Conscious Delegation
-  9. Image Generation Prompt iteration
-  10. Output Refinement
-  11. Debugging & Observability
-
 * See the excellent [documentation here](https://dspy.ai/) to get started.
 
 
@@ -22,6 +9,41 @@
 * DSPy is not just a technical toolbox or framework, but rather an entirely different approach to working with LLMs.
 * I first came across DSPy when I was building a program to perform multi-label classification on a BIG DATA set using an LLM with chain of thought prompting. I had not used DSPy and realized that DSPy is a very powerful framework that can be utilized for classifying millions of documents and much, much more!
 
+## Basics of DSPy
+1. **DSPy can replace "string based prompting"**
+   * Yes that means you don't need to write detailed string based prompts with instructions to an LLM.
+
+2. **The same prompt DOES NOT work for every LLM**
+   * A prompt that works on GPT-3.5 turbo will not work the same with Claude-3.5-Sonnet, Llama, Mistral, etc.
+   * The prompt config is actually called a "Signature" in DSPy.
+  
+3. **DSPy Optimizers**
+   * Can automatically optimize prompts.
+  
+
+## What are the basic modules in DSPy?
+1. Language Models
+2. Signatures
+3. Modules
+4. Data
+5. Metrics
+6. Optimizers
+7. Assertions
+
+## What are the use cases for DSPy?
+* Various NLP tasks are available:
+  1. Question-Answering workflows
+  2. Building LLM driven Classification Models
+  3. RAG pipelines (simple to very sophisticated)
+  4. Agentic workflows and applications including finetuning Agents
+  5. Reasoning (e.g. Chain of Thought)
+  6. Entity Extraction (e.g. Named Entity Recognition or NER)
+  7. Classification Finetuning
+  8. Multi-Hop Search/RAG
+  9. Privacy-Conscious Delegation
+  10. Image Generation Prompt iteration
+  11. Output Refinement
+  12. Debugging & Observability
 
 ## Extreme Multi-label Classification
 * What do you do when you have a very large number of possible classes in a dataset and you don't have a ground truth dataset/corpus?.
