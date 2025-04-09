@@ -30,13 +30,13 @@
 6. Optimizers
 7. Assertions
 
-
-## Signatures in DSPy
+---
+# Signatures in DSPy
 * DSPy uses a "modular" approach to programming for each task completion.
 * Modular programming is a paradigm many people know to better organize programs and applications using functions, classes, methods and objects.
 * DSPy's modularity is to be able to **optimize prompts and LLMs to get the best outputs all the time.**
 
-### What exactly are Signatures in DSPy?
+## What exactly are Signatures in DSPy?
 * Building your prompts from Signature variables which provide prompt templates makes it MUCH easier to:
   * Create prompts
   * Modify and update prompts
@@ -44,7 +44,7 @@
   * Define semantic roles
 * Just about ANY NLP task can be implemented via Signatures which are fully optimized to output better results.
 
-### What types of Signatures are there?
+## What types of Signatures are there?
 1. **Inline Signatures**
    * These are used directly inside modules.
    * Format is generally: `Input --> Output`
@@ -53,13 +53,13 @@
    * Descriptive arguments give hints of the input fields.
    * Descriptive arguments with constraints are given related to the output fields.
 
-### How do Signatures help with programming?
+## How do Signatures help with programming?
 1. Easily allows you to represent your programs as object oriented classes.
 2. Easily assign variables.
 3. Programmaticaly modify prompting rather than individual strings.
 4. Can be easily used within modules as Classes.
 
-### What are Signatures integrated with?
+## What are Signatures integrated with?
 * The Signatures module is fully integrated within DSPy with such modules as:
   1. `Predict`
   2. `ChainOfThought`
@@ -67,7 +67,50 @@
   4. `ProgramOfThought`
   5. `MultiChainComparison`
   6. `Majority`
+---
+# Modules in DSPy
 
+## Why do we need modules?
+  1. Modules are simply Python Classes which give us an object oriented approach to building programs.
+  2. Modules abstract prompting techniques
+  3. Modules contain "learnable parameters" -- this differs for each module class
+     * This is not the same as updating LLM weights.
+  4. Modules can be combined to build MORE complex modules.
+     * As an example: combine chain-of-thought with classification and RAG.
+  5. Modules can sometimes emit additional information.
+
+## How to Create and Use Modules
+1. **Single Objects:** Create single object with single module such as: `Predict / ChainOfThought`
+2. **Chained Objects:** Create `chained / modularized` object that contains more than one Module.
+
+## What are the Modules?
+1. **Predict**
+   * Basic predictor.
+   * **Very similar to a Prompt Template.**
+   * This DOES NOT modify the signature.
+   * Handles key forms of learning such as: storing instructions & demonstrations & updates to LLM.
+2. **ChainOfThought**
+   * Uses the same CoT prompt technique to teach the LLM to think "step-by-step" prior to executing a signature response. 
+3. **ProgramOfThought**
+   * Similar to ChainOfThought but teaches LLM/language model to output code.
+   * Results dictate the response from the LLM.
+   * Generates and executes Python code based on input fields which produces a single output field through iterative refinement.
+   * Supports multiple iterations to refine code in cases of error.
+4. **ReAct**
+   * An agent that can use tools to implement the given Signature.
+   * ReAct which is reason and act as with agentic workflows.
+5. **MultiChainComparison**
+   * Compares multiple outputs from **ChainOfThought** to produce a final prediction.
+   * Chains and Aggregates all student reasoning attempts --> very similar to Ensemble Machine Learning models.
+   * Calls predict method with extended signatures to get best reasoning.
+6. **Retrieve**
+   * Constructor initializes Retrieve class and sets up class attributes.
+   * Takes in `k` number of retrieval passages to return for a query.
+7. **Majority**
+   * Can do basic **voting** to return most popular response from a set of predictions.
+   * Model predictions are sent to this module and it votes based on probabilities or probabilistic outcomes. 
+
+---
 
 # What are the use cases for DSPy?
 * Various NLP tasks are available:
