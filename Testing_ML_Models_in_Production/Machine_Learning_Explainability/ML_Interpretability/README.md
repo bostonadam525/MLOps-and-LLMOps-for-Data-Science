@@ -64,7 +64,184 @@
 6. Regardless of the domain or focus of the model, you want to prevent "attacks" where users can make your model do things it should not, and prevent your company from losing money and customers over time and even worse prevent catastrophic errors. 
 
 ---
+# IML methods
+- allow us to extract info from ML models and explain outputs
+- Two main groups:
 
+1. Model Specific (during training)
+- directly analyze model components or parameters
+
+2. Model agnostic/post-hoc (after model training)
+- study sensitivity to data input perturbation
+- use surrogate approximations of the models
+
+---
+## Intrinsic Explainable Models
+- Examples of these include:
+1. Linear models (linear regression, logistic regression)
+2. GAMS (Generalized additive models)
+- https://christophm.github.io/interpretable-ml-book/extend-lm.html#gam
+- Comparison of generalised additive models and neural networks in applications: A systematic review: https://arxiv.org/html/2510.24601v1
+3. Decision Trees
+4. Constrained GBMS
+5. Rule-based models
+6. KNNs
+
+### Model Components Interpretation
+- model parameters analysis help us understand what they predict and why. 
+- These include:
+
+1. Linear Models --> coefficients
+2. Decision Trees --> splits, information gain
+3. Rule based --> rules
+
+
+## Sensitivity Methods 
+- after train the model --> alter/manipulate input data and then critically analyze effect on model prediction
+- Rule of thumb: Greater change in output --> more relevant the manipulation
+- Most common Sensitivity methods/techniques include:
+
+1. Permutation Feature Importance (PMI)
+2. Partial Dependency Plots (PDPs)
+3. Feature hiding
+4. SHAP
+
+
+## Surrogate Models
+- This method attempts to predict a "black box" models predictions using a trained "intrinsically interpretable model"
+- Examples: Linear models, Decision Trees
+- Analyze results of surrogate models to attempt to better understand the black box models.
+- How this works
+
+1. Train black box model: X,y --> black box --> predictions
+2. Train surrogate model: X, preds --> surrogate --> output
+
+- Assumption: White box model represents the black box model, this is not always true though. 
+- There is no true way to determine if the white box model represents the black box model on the same data and features. 
+
+
+## MIXED Models
+- LIME --> combines surrogate AND perturbation methods. 
+
+
+----
+# Global and Local Model Explainability
+- NOTE: interpretability means the same as explainability
+
+
+## Global explainability
+- A global assessment of feature's contribution or importance to the outputs of an ML model
+- Global means "AGGREGATED" feature contribution -- thus it considers a features contribution to the ENTIRE dataset. Classic example: Decision Trees
+- Global interpretation answers questions:
+1. Do features make sense for the specific domain?
+2. Does feature ordering influence the outputs?
+3. Increased vulnerability: is the model placing too much weight on specific feature(s) and this changes or biases the outputs?
+
+### Statistical testing for Global interpretability
+1. Correlation (linear and non-linear)
+2. Regression
+
+- We can use model parameters to understand the predictions:
+1. Linear models --> coefficients
+2. Decision trees --> splits, information gain (entropy)
+3. Rule based --> Rules
+
+### Post-hoc method for Global interpretability
+- Permutation feature importance (PMI)
+- Feature elimination (hiding, occlusion, explain)
+- Partial dependency plots (PDP)
+- Counterfactual explanations
+- Surrogates
+
+---
+# Local explainability
+- Focuses on which features impacted a specific prediction.
+- Examples:
+1. Why did the model predict a hospital re-admission given the input diagnosis?
+2. Why was the insurance claim predicted as fraudulent?
+3. Why did the CV model predict a dog and not a cat? 
+
+## Model components for LOCAL interpretation
+- Coefficients (linear models)
+- Tree branches or rules navigation (e.g. Decision Trees, Random Forest)
+
+## Post-hoc methods for LOCAL interpretation
+1. Shapley
+2. LIME
+3. Accumulated local effects
+
+## LOCAL to GLOBAL post-hoc methods
+- We are able to aggregate local effects to obtain global interpretable explanations --> Shapley is the best algorithm for this
+---
+## Mapping Classical ML Interpretability Frameworks to Large Language Models (LLMs)
+- The classical division of machine learning (ML) interpretability into intrinsic vs. extrinsic (post-hoc) and black-box vs. white-box systems directly maps to Large Language Models (LLMs).
+- However, because LLMs manipulate vast embedding spaces instead of discrete tabular rows, the core unit of feature analysis shifts from variables to tokens, hidden layers, and circuits. [1, 2, 3] 
+------------------------------
+## 1. Intrinsic vs. Extrinsic (Post-Hoc) Frameworks in LLMs
+
+## Intrinsic Explainability (White-Box Systems)
+- In classical ML, intrinsic interpretability belongs to simple "white-box" algorithms (e.g., shallow Decision Trees or Linear Coefficients) where a human can directly read the mathematical weights to understand logic.
+
+* The LLM Dilemma: No purely "intrinsic" LLMs exist. Looking at the raw weights of billions of dense parameters is completely uninterpretable to humans. [1] 
+* The LLM Transition (Mechanistic Interpretability): To achieve internal understanding, researchers bypass raw parameters and look at internal representations. A prominent approach trained during or after optimization is the use of Sparse Autoencoders (SAEs). Pioneered by researchers at [Anthropic](https://transformer-circuits.pub/2024/scaling-monosemanticity/), SAEs reconstruct complex, overlapping internal activations into a highly sparse, expanded dictionary of human-understandable "concepts" or "features" (e.g., finding a sub-network circuit that exclusively fires when handling text about legal compliance). [4, 5, 6, 7] 
+
+## Extrinsic / Post-Hoc Explainability (Black-Box & White-Box)
+- Post-hoc methods analyze the system after training has concluded. In language systems, these split cleanly by access level: [2, 8] 
+
+* Black-Box Extrinsic: The analyst has access only to prompt inputs and raw generated text tokens. Interpretability relies purely on text manipulation (perturbation) to test how changes alter output text probability. [2, 3]
+ 
+* White-Box Extrinsic: The analyst leverages full access to the network architecture. After a token is generated, they calculate the gradient flow backwards through the attention layers to determine token attribution. [2, 8] 
+
+------------------------------
+## 2. Applicability of Classical ML Methods to LLMs
+- Classical post-hoc methods can technically be adapted to LLMs, but they face acute structural limitations, as outlined in this summary of a comprehensive [survey on LLM explainability](https://dl.acm.org/doi/full/10.1145/3639372): [2] 
+
+| Classical Method | Application to LLMs | Architectural Challenge / Limitation |
+|---|---|---|
+| LIME & SHAP | Local / Black-Box: Treat every token/word in the input prompt as a distinct feature. Randomly mask or drop tokens to see how output probability shifts. | Combinatorial Explosion: Running SHAP requires thousands of distinct forward passes per prompt. Scaled to autoregressive windows, it becomes computationally prohibitive. |
+| Permutation Feature Importance (PFI) | Global / Black-Box: Shuffling or replacing broad token types (e.g., masking all proper nouns across an entire evaluation dataset) to observe accuracy degradation. | Syntax Destruction: Randomly shuffling text strings breaks grammar structures, pushing the model into unnatural out-of-distribution spaces that yield unreliable error metrics. |
+| Partial Dependence Plots (PDP) | Not Viable: Classically measures the marginal effect of 1 or 2 isolated variables while holding all other features at an average baseline. | Non-Marginal Text Properties: Tokens cannot be isolated cleanly on a continuous axis while "holding the rest of the sentence constant" without altering semantics. |
+| Surrogate Models | Local / Global / Black-Box: Training a white-box surrogate (like a shallow decision tree) on paired [LLM Prompt $\rightarrow$ LLM Target Output] sequences. | Loss of Contextual Nuance: Linear or simple rule-based models fail entirely to capture long-range contextual associations and complex syntactic patterns. |
+
+------------------------------
+## 3. The LLM Evolutionary Upgrade
+- To bypass the costs and context-breaking failures of classical tabular tools, specialized interpretability protocols have emerged for deep language systems:
+
+* Instead of SHAP/LIME $\rightarrow$ Gradient-Saliency (Integrated Gradients): White-box testing uses approaches like Integrated Gradients (IG) to compute continuous mathematical vectors from output tokens back to input embedding tensors. This yields precise, token-by-token local attribution instantly without running thousands of separate text mutations.
+* Instead of Feature Selection $\rightarrow$ Attention Visualization: Engineers map internal attention matrices directly to identify exactly which previous words an attention head prioritized when picking the subsequent token.
+* Instead of Global Surrogates $\rightarrow$ Linear Probing: Researchers freeze the layers of an LLM and train minimal linear classifiers against internal hidden state vectors. If the probe successfully categorizes an abstract trait (e.g., identifying factual truth vs falsehood), it mathematically confirms that the LLM's layer natively encoded that feature. [2, 8, 9, 10, 11] 
+
+------------------------------
+## References & Further Reading
+
+* Christoph Molnar. (2020). [Interpretable Machine Learning: A Guide for Making Black Box Models Explainable](https://www.google.com/search?q=interpretable+machine+learning:+a+guide+for+making+black+box+models+explainable&kgmid=/g/11h80lspn2). [Interpretable Machine Learning Book](https://christophm.github.io/interpretable-ml-book/).
+* Zhao, H., et al. (2024). Explainability for Large Language Models: A Survey. ACM Computing Surveys. ACM Digital Library.
+* Bricken, T., et al. (2024). Scaling Monosemanticity: Extracting Interpretable Features from Claude 3 Sonnet. Anthropic Transformer Circuits Research. Transformer Circuits Publication.
+* Lin, Z., et al. (2025). A Survey on Mechanistic Interpretability for Multi-Modal Foundation Models. arXiv preprint. [arXiv:2502.17516](https://arxiv.org/abs/2502.17516). [2, 4, 12] 
+
+[1] [https://www.anthropic.com](https://www.anthropic.com/research/natural-language-autoencoders)
+[2] [https://dl.acm.org](https://dl.acm.org/doi/full/10.1145/3639372)
+[3] [https://mindfulmodeler.substack.com](https://mindfulmodeler.substack.com/p/the-practical-way-to-explain-llms)
+[4] [https://transformer-circuits.pub](https://transformer-circuits.pub/2024/scaling-monosemanticity/)
+[5] [https://dl.acm.org](https://dl.acm.org/doi/10.1145/3787104)
+[6] [https://openreview.net](https://openreview.net/forum?id=F76bwRSLeK)
+[7] [https://arxiv.org](https://arxiv.org/html/2506.23845v1)
+[8] [https://arxiv.org](https://arxiv.org/html/2504.00125v1)
+[9] [https://ar5iv.labs.arxiv.org](https://ar5iv.labs.arxiv.org/html/2309.01029)
+[10] [https://www.techrxiv.org](https://www.techrxiv.org/doi/pdf/10.36227/techrxiv.177031352.23132160)
+[11] [https://www.preprints.org](https://www.preprints.org/manuscript/202607.1441)
+[12] [https://arxiv.org](https://arxiv.org/abs/2502.17516)
+
+
+----
+# BIG Challenges to ML model Interpretation
+- This is even an issue with white box models (internal parameters available), these include but are not limited to:
+1. INPUT DATA (e.g. correlation biases)
+2. ML models (e.g. complexity, performance)
+3. Human bias (e.g. data in and bias interpretations)
+
+## Correlation
+- correlation breaks the principle of independence which makes it more difficult to interpret features on their own. 
 
 
 
