@@ -234,6 +234,9 @@
 
 
 ----
+
+
+----
 # BIG Challenges to ML model Interpretation
 - This is even an issue with white box models (internal parameters available), these include but are not limited to:
 1. INPUT DATA (e.g. correlation biases)
@@ -242,13 +245,67 @@
 
 ## Correlation
 - correlation breaks the principle of independence which makes it more difficult to interpret features on their own. 
+- Another problem:
+  - Correlation effects coefficients in linear models and importance in decision trees are affected by correlation. 
+  - So, if we remove or "perturb" a feature, a correlated feature takes its place in the model --> thus masking the full effect of removal/perturbation. 
+- Methods that are effected by this:
+
+1. Permutation feature importance
+2. Feature elimination methods
+
+## Bias in the Data
+- The saying "garbage in == garbage out" applies here.
+- If the training data for your models is not an adequate representation of the population or use case(s) your model will be used on, then we know the model outputs cannot be accurate or trusted. 
+
+## Confirmation Bias
+- **THIS IS VERY IMPORTANT**
+- Humans are prone to this as we very often have a high bias towards a specific feature or features and thus select a specific model/post-hoc method that distorts and shows that bias. This could be due to domain/field expertise rather than relying on a data driven approach.  
+  - An example of this might be that you choose a specific evaluation metric or technique or even modeling approach to amplify a feature that you have a bias towards. This is obviously non-scientific and why a scientific approach to evaluation and modeling should often included blinding and removing this bias. 
+
+## Poor model performance
+- If the data doesn't fit your model well at all --> the predictions will be meaningless and irrelevant. 
 
 
+## Black Box Models
+- Deep learning and LLMs are a good example of this. 
+- These models are virtually impossible to scrutinize and interpret because we genuinely don't know whats going on under the hood. 
+- However, using post-hoc methods to explain black box models can lead to misleading or flat out wrong interpretations because we genuinely don't know the inner workings of the model. 
+
+## White Box models -- limitations?
+- The trade-off here is to leverage ML models that can be simple enough to understand and interpret for technical and business stakeholders, yet needs to be complex enough to appropriately fit and model your data. 
+- Examples:
+
+1. Too many features --> model is hard to interpret/explain/make sense of
+
+2. Highly complex models --> TOO MANY PARAMETERS --> very difficult to explain:
+  - Deeper Decision trees (should prune them?)
+  - Non-monotonic relationships
+  - Feature interactions
 
 
+## Rashomon Sets
+1. There are multiple almost-equally accurate models
+2. These models that are high performing are called a "Rashomon Set"
+3. Definition of "Rashomon effect": multiple descriptions (models) of the SAME event
+4. See this paper: https://arxiv.org/html/2407.04846v2
+---
+## Question: Are Rashomon Sets the same as Mixture of Experts?
+- Simply put, No, a Mixture of Experts (MoE) is not the same as a Rashomon set. They describe entirely different concepts in machine learning: one is a single cooperative network architecture used for efficient computation, and the other is a statistical phenomenon where many separate, standalone models achieve similar predictive accuracy.
+
+### Mixture of Experts (MoE)
+- What it is: A single, large neural network architecture where specific layers are split into multiple smaller subnetworks ("experts") managed by a gating router.
+- How it works: For every incoming piece of data or token, the router dynamically activates only a small subset of the experts to process that specific input collaboratively.
+- Goal: Scale up model capacity and speed up training and inference by making the model sparse rather than running every parameter for every task.
+
+### Rashomon Sets
+- What it is: A collection of distinct, independent models from a model class that all score nearly identical, high predictive accuracy on a given dataset.
+- How it works: Named after the film Rashomon (where different characters tell conflicting versions of the same event), it highlights that multiple different internal rules or reasoning paths can explain the same data equally well.
+- Goal: A theoretical and practical tool used in explainable AI to choose simpler, fairer, or more interpretable models from a pool of equally accurate alternative
 
 ---
 # Resources and References
 - [CVS Health - uqlm: Uncertainty Quantification for Language Models](https://github.com/cvs-health/uqlm)
 - [Interpretable Machine Learning](https://christophm.github.io/interpretable-ml-book/interpretability.html)
 - [Stiglic et al, 2020. Interpretability of machine learning based prediction models in healthcare](https://arxiv.org/abs/2002.08596)
+- [Rudin et al, 2024. Amazing Things Come From Having Many Good Models](https://arxiv.org/html/2407.04846v2)
+- [Train in Data - ML model interpretability](https://github.com/trainindata/machine-learning-interpretability)
