@@ -6,7 +6,8 @@
 ## Bagging vs. Boosting
 
 <img width="496" height="254" alt="image" src="https://github.com/user-attachments/assets/93c6ae2b-c203-4d4d-952e-51855d1211a0" />
-- [image source](https://lewtun.github.io/hepml/lesson04_intro-to-gradient-boosting/)
+
+[image source](https://lewtun.github.io/hepml/lesson04_intro-to-gradient-boosting/)
 
 
 ### Bagging - bootstrap aggregating
