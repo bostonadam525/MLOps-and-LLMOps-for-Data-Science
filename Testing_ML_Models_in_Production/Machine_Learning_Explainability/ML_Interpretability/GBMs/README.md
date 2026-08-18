@@ -37,6 +37,12 @@
 	- residuals are bigger in situations where previous model was more wrong
 
 
+ <img width="1536" height="864" alt="image" src="https://github.com/user-attachments/assets/c155f150-4c34-42a6-b9dd-d6baf7a5e158" />
+
+ [image source](https://www.superdatascience.com/podcast/sds-771-gradient-boosting-xgboost-lightgbm-and-catboost-with-kirill-eremenko)
+
+
+
 # Gradient Boosting Machines (GBM) -- Global Explainability
 - In this case, global explanation == feature importance
 - Feature importance quantified, two things are necessary:
@@ -78,10 +84,8 @@ Gain = w x Hparent - (w x Hleft + w x Hright)
 ## GBM Feature Importance
 - we must consider ALL trees as if they were all 1 massive tree together (ensemble of trees as 1 big tree). 
 
-	
 
-
-
-
-
-
+---
+# References/Resources
+- [sklearn docs](https://scikit-learn.org/stable/modules/ensemble.html)
+- [Feature Importance in Gradient Boosting Trees with Cross-Validation Feature Selection](https://pmc.ncbi.nlm.nih.gov/articles/PMC9140774/)
