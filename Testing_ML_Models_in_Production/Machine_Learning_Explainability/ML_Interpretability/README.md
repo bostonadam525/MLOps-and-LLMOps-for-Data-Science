@@ -303,9 +303,62 @@
 - Goal: A theoretical and practical tool used in explainable AI to choose simpler, fairer, or more interpretable models from a pool of equally accurate alternative
 
 ---
+# Making models more interpretable
+
+## Challenges to interpretability
+
+### Data and Features
+- if the training data is not transparent then how can the model(s) be transparent? To make the models more transparent we want to avoid overly complex feature engineering techniques such as use of autoencoders, PCA, polynomial combinations, and complex encodings.
+	- Yes these techniques are interesting and sometimes genuinely useful, but in the end they do not help make the training data more transparent or even usable.
+	- PCA is actually NOT an ideal feature selection algorithm. It is better as an unsupervised tool for understanding and exploring the data NOT for building the features for a training set. 
+
+### Selecting Data and Features
+- These should "make sense" for a given domain and use case(s).
+- Avoid using features that introduce bias and discrimination.
+- Make sure the data accurately represents the population and use case(s). 
+- Monotonic features are KEY --> easier to understand
+	- Monotonic features in machine learning refer to an input variable that has a consistent, unidirectional relationship with the target prediction. 
+	- As the value of a monotonic feature goes up, the predicted output value will either exclusively go up (increasing) or exclusively go down (decreasing), without reversing direction.
+	- Monotonically Increasing: As the feature value increases, the model's prediction also increases or stays flat.
+	- Monotonically Decreasing: As the feature value increases, the model's prediction decreases or stays flat.
+
+
+## Feature Selection
+1. Simpler models are EASY to understand
+	- use less features
+	- remove noisy or non-relevant features
+	- use: Lasso, Ridge, and other feature selection methods if possible. 
+	- Other approaches include but are not limited to: Filter methods, Wrapper methods, and Tree-based embedded methods
+
+### Feature Selection for RAG (Retrieval Augmented Generation)
+- Feature selection in Retrieval-Augmented Generation (RAG) optimizes which metadata tags, text attributes, or retrieved context chunks are passed to the language model to maximize accuracy while minimizing token cost and latency.
+- Core Selection Approaches include:
+
+1. **Metadata Filtering:** Restrict vector searches using structured attributes (e.g., date, category, author) before executing semantic retrieval.
+2. **Context Re-ranking:** Use cross-encoder models to score and select only the highest-relevance passages from an initial broad retrieval set.
+3. **Diversity & Conflict Reduction:** Apply matrix-based subset selection (like Determinantal Point Processes) to remove redundant or conflicting chunks.
+4. **Ablation & Attribution:** Measure downstream evaluation degradation when individual feature signals or context fields are removed.
+
+
+
+## Methods
+1. Intrinsically explainable models are most ideal when possible. 
+2. Constraints are paramount to limit complexity
+	- Monotonic constraints (in decision trees) --> more understandable to human interpretation, easier to troubleshoot and use in practice
+3. Optimize for PERFORMANCE METRIC(s)/fit and model interpretability
+	- however, be careful optimizing to 1 metric as it can and will overfit the model to that 1 condition. 
+
+
+## Black Box Models
+- Make sure to use more than 1 interpretable metrics or results if possible. 
+
+
+---
 # Resources and References
 - [CVS Health - uqlm: Uncertainty Quantification for Language Models](https://github.com/cvs-health/uqlm)
 - [Interpretable Machine Learning](https://christophm.github.io/interpretable-ml-book/interpretability.html)
 - [Stiglic et al, 2020. Interpretability of machine learning based prediction models in healthcare](https://arxiv.org/abs/2002.08596)
 - [Rudin et al, 2024. Amazing Things Come From Having Many Good Models](https://arxiv.org/html/2407.04846v2)
 - [Train in Data - ML model interpretability](https://github.com/trainindata/machine-learning-interpretability)
+- [NLP based feature selection](https://www.emergentmind.com/topics/nlp-based-feature-engineering)
+- [Elevating RAG from Novelty to Strategic Imperative](https://pub.towardsai.net/elevating-rag-from-novelty-to-strategic-imperative-e7010b3ef16f)
