@@ -89,3 +89,5 @@ Gain = w x Hparent - (w x Hleft + w x Hright)
 # References/Resources
 - [sklearn docs](https://scikit-learn.org/stable/modules/ensemble.html)
 - [Feature Importance in Gradient Boosting Trees with Cross-Validation Feature Selection](https://pmc.ncbi.nlm.nih.gov/articles/PMC9140774/)
+- [XGBoost Feature Importance](https://zg104.github.io/ML/XGBoost.html#how-can-you-interpret-the-output-of-an-xgboost-model-in-terms-of-feature-importance)
+- 
