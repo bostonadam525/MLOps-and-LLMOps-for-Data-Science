@@ -41,8 +41,39 @@
 
  [image source](https://www.superdatascience.com/podcast/sds-771-gradient-boosting-xgboost-lightgbm-and-catboost-with-kirill-eremenko)
 
+---
+# Gradient Boosting Machines (GBM) -- Local Explainability
+- Local means how does a specific feature contribute to the importance of a particular prediction or observation.
+- GBMs are weak learners that build trees step by step.
+- Final predictions are a concatenation of each weak learner: Prediction + Prediction + Prediction = PREDICTION
+- Fitting the GBM: **Each tree minimizes the difference between its predictions and the residuals of the previous tree classifier/regressor.**
+
+## Intuition -- GBM Gradient Descent
+- Each tree in a GBM is getting closer and closer to a real target prediction value.
+- [Understanding Gradient Boosting as a gradient descent](https://nicolas-hug.com/blog/gradient_boosting_descent)
+
+## How do we obtain a prediction with GBMs? 
+- Ensemble of weak learners
+- Prediction is sum of each prediction from concat of weak learners
+- GBMs use the bias and the weight to get the final prediction. The bias is equal to the mean(y_train). 
+- So it looks like this:
+```
+Prediction = bias + w*10 + w*5 - w*2
+Prediction = mean(y_train) + w*10 + w*5 - w*2
+
+## How do we obtain the feature contribution?
+- Not only is each FEATURE "nudging" the approximate prediction/answer to the "real target value",
+- Each SPLIT is nudging the approximation in each tree to the "real target value".
+- **Feature Contribution** --> the contribution at each split after aggregation over the ensemble.
+- Essentially, this is the overall learning rate (or shrinkage) applied to each tree -- calculated using node splits and path allocations.
+-  The global learning rate (η) acts as a multiplier on the output value of each individual tree's leaf nodes. Consequently, it scales the final computed feature contributions uniformly across the ensemble.
+- Node and Edge Structure:
+	- Trees route samples through nodes based on feature thresholds (edges/splits), allocating the conditional expected values of the predictions, but the steps themselves do not have independent learning rates per edge.
 
 
+``` 
+
+---
 # Gradient Boosting Machines (GBM) -- Global Explainability
 - In this case, global explanation == feature importance
 - Feature importance quantified, two things are necessary:
