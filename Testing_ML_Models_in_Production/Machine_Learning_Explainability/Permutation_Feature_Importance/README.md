@@ -90,3 +90,4 @@ Next, we apply PFI:
 ---
 # Resources
 - [Explainable AI: Demystifying the Black Box Models](https://www.analyticsvidhya.com/blog/2023/10/explainable-ai-demystifying-the-black-box-models/)
+- [Permutation feature importance](https://christophm.github.io/interpretable-ml-book/feature-importance.html)
