@@ -62,6 +62,11 @@
 4. Laws, regulations, and rules that apply to specific domains are paramount in machine learning -- if we don't know if the model is following these it is a BIG PROBLEM
 5. Guardrails and Security -- we want to prevent a model from predicting unwanted or undesired outputs 
 6. Regardless of the domain or focus of the model, you want to prevent "attacks" where users can make your model do things it should not, and prevent your company from losing money and customers over time and even worse prevent catastrophic errors. 
+---
+# Overview of Explainable AI (XAI)
+- [source of image below](https://www.analyticsvidhya.com/blog/2023/10/explainable-ai-demystifying-the-black-box-models/)
+
+<img width="1536" height="759" alt="image" src="https://github.com/user-attachments/assets/71c75e67-d3fe-4a4d-b3d2-fcb9501e98b9" />
 
 ---
 # IML methods
