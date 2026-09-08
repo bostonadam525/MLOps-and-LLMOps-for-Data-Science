@@ -361,6 +361,9 @@
 ---
 # Resources and References
 - [CVS Health - uqlm: Uncertainty Quantification for Language Models](https://github.com/cvs-health/uqlm)
+- [Captum - Model Interpretability for PyTorch](https://captum.ai/)
+  - [Captum github](https://github.com/meta-pytorch/captum)
+- [Learning Interpretability Tool - LIT](https://github.com/pair-code/lit)
 - [Interpretable Machine Learning](https://christophm.github.io/interpretable-ml-book/interpretability.html)
 - [Stiglic et al, 2020. Interpretability of machine learning based prediction models in healthcare](https://arxiv.org/abs/2002.08596)
 - [Rudin et al, 2024. Amazing Things Come From Having Many Good Models](https://arxiv.org/html/2407.04846v2)
