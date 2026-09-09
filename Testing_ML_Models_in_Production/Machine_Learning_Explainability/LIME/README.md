@@ -60,5 +60,9 @@ Synthetic data + Black Box prediction + Surrogate = Local explanations
 3. Distance calculations -- how do we get these? 
 
 
-
+---
+# Resources
+- [LIME-LLM: Probing Models with Fluent Counterfactuals, Not Broken Text](https://arxiv.org/html/2601.11746v1)
+- [Interpretable Machine Learning - LIME](https://christophm.github.io/interpretable-ml-book/lime.html)
+- [Applying LIME to Text Data](https://apxml.com/courses/model-interpretability-explainability/chapter-2-lime-local-interpretability/lime-text-data)
 
