@@ -9,7 +9,7 @@
   - financial orgs may focus on stopping data leakage and minimizing excessive agency vulnerabilities
   - Chatbot/virtual assistant companies might prioritize addressing bias and toxic language or behaviors. 
 
-- **If you DO NOT address these vulnerabilities it can ultimately lead to catastrophic results. For example, the spread of hallucinated or fabricated information due to insecure data and models can result in a loss of trust, legal consequences, and long-term damage to a company’s reputation and a loss of customers and profit.
+- **If you DO NOT address these vulnerabilities it can ultimately lead to catastrophic results.** For example, the spread of hallucinated or fabricated information due to insecure data and models can result in a loss of trust, legal consequences, and long-term damage to a company’s reputation and a loss of customers and profit.
 
 ---
 ## Four Pillars of LLM Security
