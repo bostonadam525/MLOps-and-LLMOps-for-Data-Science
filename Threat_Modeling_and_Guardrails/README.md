@@ -117,6 +117,11 @@ L2 - Data Operations -- RAG pipelines, vector stores, embeddings, data ingestion
 L1 - Foundation Models -- LLM APIs (e.g. OpenAI, Anthropic, Gemini, etc.), reasoning, generative capabilities)
 
 ```
+---
+# Top-Down vs. Bottom-Up Threat Modeling for AI
+- This paper: [Vicarte et al, 2025. Threat Modeling for AI: The Case for an Asset-Centric Approach](https://arxiv.org/html/2505.06315v2) raises some great points about current top-down approaches vs. taking a bottom-up approach to threat modeling.
+
+
 
 ---
 # Frameworks
@@ -131,6 +136,7 @@ L1 - Foundation Models -- LLM APIs (e.g. OpenAI, Anthropic, Gemini, etc.), reaso
 ---
 # Papers
 - [Ferrag et al, 2025. From Prompt Injections to Protocol Exploits: Threats in LLM-Powered AI Agents Workflows](https://arxiv.org/html/2506.23260v2)
+- [Vicarte et al, 2025. Threat Modeling for AI: The Case for an Asset-Centric Approach](https://arxiv.org/html/2505.06315v2)
 - [Zambare et al, 2025. Securing Agentic AI: Threat Modeling and Risk Analysis for Network Monitoring Agent AI System](https://arxiv.org/html/2508.10043v1)
 
 ---
