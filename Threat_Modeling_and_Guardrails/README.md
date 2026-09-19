@@ -38,6 +38,30 @@
 
 - Source: [OWASP LLM Top 10 (2026): What Changed and How to Test](https://hackerdna.com/blog/owasp-llm-top-10)
 ---
+# OWASP Top 10 for Agentic Apps (2026)
+- Industry framework that catalogs the ten most critical security risks specific to autonomous and semi-autonomous AI agent systems.
+
+1. **ASI01: Agent Goal Hijack** -- Attackers manipulate instructions, external inputs, or tool outputs to redirect an agent's core objectives
+
+2. **ASI02: Tool Misuse & Exploitation** -- Agents use legitimate tools in unsafe ways or execute dangerous tool chains due to poor scoping.
+
+3. **ASI03: Identity & Privilege Abuse** -- Agents misuse inherited, cached, or over-provisioned credentials to access unauthorized data or perform lateral movement
+
+4. **ASI04: Agentic Supply Chain Vulnerabilities** -- Compromised or malicious third-party plugins, registries, models, or MCP (Model Context Protocol) servers compromise workflows.
+
+5. **ASI05: Unexpected Code Execution** -- Agents dynamically generate or run attacker-controlled code or shell commands leading to remote code execution.
+
+6. **ASI06: Memory & Context Poisoning** -- Persistent corruption or tampering of long-term memory, short-term session context, or RAG (Retrieval-Augmented Generation) databases.
+
+7. **ASI07: Insecure Inter-Agent Communication** -- Agents exchange messages and delegate tasks without proper authentication, validation, or policy controls.
+
+8. **ASI08: Cascading Failures** -- A single error, compromised decision, or injection in one agent propagates rapidly across multi-agent networks.
+
+9. **ASI09: Human–Agent Trust Exploitation** -- Users exhibit over-reliance on persuasive agent outputs, granting high-impact approvals without adequate verification
+
+10. **ASI10: Rogue Agents** -- Misaligned, looping, or compromised agents completely diverge from intended operational boundaries.
+
+---
 
 ## OWASP Top 10 for LLM Apps -- Key Updates in 2026
 - **Data-Informed Prioritization:** The 2026 list combines 75% expert consensus voting with 25% empirical data from real-world AI incidents.
@@ -55,6 +79,44 @@
 7. MITRE ATLAS
 
 - [SOURCE](https://cloudsecurityalliance.org/blog/2025/02/06/agentic-ai-threat-modeling-framework-maestro)
+
+---
+## MAESTRO
+- Maestro stands for:
+
+```
+M - Multi-agent -- scope: distributed autonomous agents
+A - Architecture -- layered system decomposition
+E - Environment -- deployment context & constraints
+S - Security -- threat surface identification
+T - Threat -- adversarial scenario modeling
+R - Risk -- impact & likelihood assessment
+O - Outcome -- mitigation & residual risk
+
+```
+### MAESTRO 7-Layer Reference Archicture
+- Keys to framework:
+  - Each layer abstracts complexity from the layer above it.
+  - A compromise in any layer will propagate upwards.
+  - Cross-layer threat paths are the CORE MAESTRO concern.
+
+````
+L7 - Agent Ecosystem -- multi-agent interactions, marketplaces, business integrations
+
+L6 - Security & Compliance -- access controls, governance, regulatory alignment
+
+L5 - Evaluation & Observability -- monitoring, anomaly detection, HITL interfaces
+
+L4 - Deployment & Infrastructure -- Containers, IAM, CI/CD, service mesh
+
+L3 - Agent Frameworks -- Orchestration (e.g. LangChain, AutoGen, CrewAI), tool calls, planners
+
+L2 - Data Operations -- RAG pipelines, vector stores, embeddings, data ingestion
+
+L1 - Foundation Models -- LLM APIs (e.g. OpenAI, Anthropic, Gemini, etc.), reasoning, generative capabilities)
+
+
+```
 
 ---
 # Frameworks
@@ -79,6 +141,9 @@
 - [Lasso - Introducing Lasso's Expanded Automated AI Red Teaming](https://www.lasso.security/blog/lasso-agentic-red-teaming)
 - [LLM Guardrails for Data Leakage, Prompt Injection, and More](https://www.confident-ai.com/blog/llm-guardrails-the-ultimate-guide-to-safeguard-llm-systems)
 - [OWASP GenAI LLM Top 10 2026](https://genai.owasp.org/resource/owasp-genai-llm-top-10-2026/)
+- [OWASP Top 10 for Agentic Applications: What Security Teams Need To Know](https://securew2.com/blog/owasp-top-10-agentic-ai)
+- [OWASP Top 10 for Agentic Applications for 2026](https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/)
 - [OWASP Top 10 2025 for LLM Applications: What’s new? Risks, and Mitigation Techniques](https://www.confident-ai.com/blog/owasp-top-10-2025-for-llm-applications-risks-and-mitigation-techniques)
 - [OWASP LLM Top 10 (2026): What Changed and How to Test](https://hackerdna.com/blog/owasp-llm-top-10)
+- [Securing Agentic AI With PyTorch: Threat Modeling & LLM Red Teaming in Practice - Valeri Milke](https://www.youtube.com/watch?v=vvoDruv681A)
 - [The Definitive LLM Security Guide: OWASP Top 10 2025, Safety Risks and How to Detect Them](https://www.confident-ai.com/blog/the-comprehensive-guide-to-llm-security#what-is-llm-security)
