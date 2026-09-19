@@ -37,6 +37,7 @@
 10. **LLM10: Improper Output Handling** – Inadequate validation of model outputs before passing them to downstream systems or code interpreters
 
 - Source: [OWASP LLM Top 10 (2026): What Changed and How to Test](https://hackerdna.com/blog/owasp-llm-top-10)
+
 ---
 # OWASP Top 10 for Agentic Apps (2026)
 - Industry framework that catalogs the ten most critical security risks specific to autonomous and semi-autonomous AI agent systems.
@@ -62,7 +63,6 @@
 10. **ASI10: Rogue Agents** -- Misaligned, looping, or compromised agents completely diverge from intended operational boundaries.
 
 ---
-
 ## OWASP Top 10 for LLM Apps -- Key Updates in 2026
 - **Data-Informed Prioritization:** The 2026 list combines 75% expert consensus voting with 25% empirical data from real-world AI incidents.
 - **Excessive Agency Promotion:** Jumped significantly higher in the ranking as autonomous agents began deploying in production environments and causing real operational impact.
@@ -92,8 +92,9 @@ S - Security -- threat surface identification
 T - Threat -- adversarial scenario modeling
 R - Risk -- impact & likelihood assessment
 O - Outcome -- mitigation & residual risk
-
 ```
+
+---
 ### MAESTRO 7-Layer Reference Archicture
 - Keys to framework:
   - Each layer abstracts complexity from the layer above it.
@@ -114,7 +115,6 @@ L3 - Agent Frameworks -- Orchestration (e.g. LangChain, AutoGen, CrewAI), tool c
 L2 - Data Operations -- RAG pipelines, vector stores, embeddings, data ingestion
 
 L1 - Foundation Models -- LLM APIs (e.g. OpenAI, Anthropic, Gemini, etc.), reasoning, generative capabilities)
-
 
 ```
 
