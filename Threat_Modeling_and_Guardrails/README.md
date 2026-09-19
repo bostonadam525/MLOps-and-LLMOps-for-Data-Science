@@ -101,7 +101,7 @@ O - Outcome -- mitigation & residual risk
   - A compromise in any layer will propagate upwards.
   - Cross-layer threat paths are the CORE MAESTRO concern.
 
-````
+```
 L7 - Agent Ecosystem -- multi-agent interactions, marketplaces, business integrations
 
 L6 - Security & Compliance -- access controls, governance, regulatory alignment
