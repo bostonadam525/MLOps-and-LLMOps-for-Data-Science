@@ -59,8 +59,34 @@
 <img width="1050" height="520" alt="image" src="https://github.com/user-attachments/assets/cc4f56b2-f7d1-4844-82c0-1a9a37ae6ee6" />
 
 - [Source](https://www.analyticsvidhya.com/blog/2023/01/ensemble-learning-methods-bagging-boosting-and-stacking/)
+---
+## Random Forest Bagging
+- Random Forests (RFS) use decision trees at each node --- where the best data split is obtained based on a random subset of features.
+- Thus with a RF, we can consider ALL angles/opinions before coming to a final decision.
+
+### Bootstrap Aggregation (Bagging)
+- By injecting "randomness" we can create de-correlated or de-coupled classifiers.
+- **When we combine them we can improve the overall generalization of the predictions.**
+- Bagging can be applied to any CLASSIFIER:
+  - Logistic Regression
+  - Decision Trees --> Random Forests
+---
+# Random Forests - Global vs. Local Interpretation
+- For a Decision Tree classifier, we measure **how often a feature is chosen** in the tree --> **we do this by measuring HOW LARGE the increase in purity is.**
+
+## Global Intepretation of RFs
+- To create RF models we extract random samples from the dataset --> train a decision tree model on this random sample --> then take the AVERAGE OF ALL TREES
+
+## Local Interpretation of RFs
+- This is the same process as used with Decision Trees.
+- We simply follow the "path" that is taken down the tree at each node split decision process to understand the "local" intpretation and feature contribution importance.
+- At the end of this we take the average of all trees given the local importance of the features. 
+
+<img width="480" height="360" alt="image" src="https://github.com/user-attachments/assets/5a673193-5cde-4750-b4b6-c452a10219cc" />
+
 
 ---
 # References
 - [Bagging, Boosting and Stacking: Ensemble Learning in ML Models](https://www.analyticsvidhya.com/blog/2023/01/ensemble-learning-methods-bagging-boosting-and-stacking/)
+- [NVIDIA - Random Forest](https://www.nvidia.com/en-us/glossary/random-forest/)
 - [What is Bagging in Machine Learning?](https://www.analyticsvidhya.com/blog/2024/06/bagging-in-machine-learning/)
