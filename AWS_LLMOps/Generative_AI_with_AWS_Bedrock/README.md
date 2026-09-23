@@ -42,3 +42,9 @@
     * May need to request model access based on region location.
     * Pick a model you have access to. 
     * Need to access the `API request` code.
+
+---
+# Resources
+- [Amazon SageMaker JumpStart Industry: Financial](https://docs.aws.amazon.com/sagemaker/latest/dg/studio-jumpstart-industry.html)
+- [Process multi-page documents with human review using Amazon Bedrock Data Automation and Amazon SageMaker AI](https://aws.amazon.com/blogs/machine-learning/process-multi-page-documents-with-human-review-using-amazon-bedrock-data-automation-and-amazon-sagemaker-ai/)
+- [Process financial documents using Amazon Bedrock Data Automation](https://aws.amazon.com/blogs/machine-learning/process-financial-documents-using-amazon-bedrock-data-automation/)
