@@ -54,6 +54,7 @@ Model output = baseline + attribution(feature) + attribution(feature2) + attribu
 ---
 # Resources/References
 - [AI Explainability in 2026: Tools, Techniques, and Frameworks to Build Transparent AI Systems](https://futureagi.com/blog/ai-explainability-tools-techniques-2025/)
+- [AWS SageMaker Clarify](https://docs.aws.amazon.com/sagemaker/latest/dg/clarify-model-explainability.html)
 
 
 
@@ -61,4 +62,6 @@ Model output = baseline + attribution(feature) + attribution(feature2) + attribu
 # Papers
 - [AgentSHAP: Interpreting LLM Agent Tool Importance with Monte Carlo Shapley Value Estimation](https://arxiv.org/html/2512.12597v1)
 - [From Features to Actions: Explainability in Traditional and Agentic AI Systems](https://arxiv.org/abs/2602.06841)
+- [From Black Box to Glass Box: A Practical Guide to Implementing XAI with SHAP on a Hybrid AI Agent](https://medium.com/data-science-collective/from-black-box-to-glass-box-a-practical-guide-to-implementing-xai-with-shap-on-a-hybrid-ai-agent-701c86048d74)
+- [llmSHAP: A Principled Approach to LLM Explainability](https://arxiv.org/html/2511.01311v1)
 - [Understanding and Optimizing Agentic Workflows via Shapley value](https://arxiv.org/html/2502.00510v3)
