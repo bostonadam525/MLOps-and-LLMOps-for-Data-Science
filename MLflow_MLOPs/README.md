@@ -66,3 +66,7 @@
 3. Model performance monitoring
 5. Cross-functional project collaboration with a team —-> every developer can review inputs and outputs
 
+---
+# Resources
+- [Streamlining generative AI development with MLflow v3.10 on Amazon SageMaker AI](https://aws.amazon.com/blogs/machine-learning/streamlining-generative-ai-development-with-mlflow-v3-10-on-amazon-sagemaker-ai/)
+- [Advanced tracing and evaluation of generative AI agents using LangChain and Amazon SageMaker AI MLFlow](https://aws.amazon.com/blogs/machine-learning/advanced-tracing-and-evaluation-of-generative-ai-agents-using-langchain-and-amazon-sagemaker-ai-mlflow/)
