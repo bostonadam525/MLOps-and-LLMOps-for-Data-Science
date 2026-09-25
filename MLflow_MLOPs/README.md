@@ -70,3 +70,4 @@
 # Resources
 - [Streamlining generative AI development with MLflow v3.10 on Amazon SageMaker AI](https://aws.amazon.com/blogs/machine-learning/streamlining-generative-ai-development-with-mlflow-v3-10-on-amazon-sagemaker-ai/)
 - [Advanced tracing and evaluation of generative AI agents using LangChain and Amazon SageMaker AI MLFlow](https://aws.amazon.com/blogs/machine-learning/advanced-tracing-and-evaluation-of-generative-ai-agents-using-langchain-and-amazon-sagemaker-ai-mlflow/)
+- [MLflow Evaluation with SageMaker Jobs and Bedrock LLM-as-a-Judge](https://builder.aws.com/content/31vda6VY2m5U9xZMOhKQR3IMFkP/mlflow-evaluation-with-sagemaker-jobs-and-bedrock-llm-as-a-judge)
