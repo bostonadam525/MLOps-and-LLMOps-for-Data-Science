@@ -48,3 +48,6 @@
 - [Amazon SageMaker JumpStart Industry: Financial](https://docs.aws.amazon.com/sagemaker/latest/dg/studio-jumpstart-industry.html)
 - [Process multi-page documents with human review using Amazon Bedrock Data Automation and Amazon SageMaker AI](https://aws.amazon.com/blogs/machine-learning/process-multi-page-documents-with-human-review-using-amazon-bedrock-data-automation-and-amazon-sagemaker-ai/)
 - [Process financial documents using Amazon Bedrock Data Automation](https://aws.amazon.com/blogs/machine-learning/process-financial-documents-using-amazon-bedrock-data-automation/)
+- [Amazon Bedrock Knowledge Bases now supports advanced parsing, chunking, and query reformulation giving greater control of accuracy in RAG based applications](https://aws.amazon.com/blogs/machine-learning/amazon-bedrock-knowledge-bases-now-supports-advanced-parsing-chunking-and-query-reformulation-giving-greater-control-of-accuracy-in-rag-based-applications/)
+- [A Developer’s Guide to Advanced Chunking and Parsing with Amazon Bedrock](https://builder.aws.com/content/2jU5zpqh4cal0Lm47MBdRmKLLJ5/a-developers-guide-to-advanced-chunking-and-parsing-with-amazon-bedrock)
+- [Evaluate and improve performance of Amazon Bedrock Knowledge Bases](https://aws.amazon.com/blogs/machine-learning/evaluate-and-improve-performance-of-amazon-bedrock-knowledge-bases/)
