@@ -361,6 +361,7 @@
 ---
 # Resources and References
 - [CVS Health - uqlm: Uncertainty Quantification for Language Models](https://github.com/cvs-health/uqlm)
+- [explainX: LLM-native Explainable AI](https://github.com/explainX/explainx)
 - [Captum - Model Interpretability for PyTorch](https://captum.ai/)
   - [Captum github](https://github.com/meta-pytorch/captum)
 - [Learning Interpretability Tool - LIT](https://github.com/pair-code/lit)
