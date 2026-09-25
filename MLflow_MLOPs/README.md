@@ -72,3 +72,7 @@
 - [Streamlining generative AI development with MLflow v3.10 on Amazon SageMaker AI](https://aws.amazon.com/blogs/machine-learning/streamlining-generative-ai-development-with-mlflow-v3-10-on-amazon-sagemaker-ai/)
 - [Advanced tracing and evaluation of generative AI agents using LangChain and Amazon SageMaker AI MLFlow](https://aws.amazon.com/blogs/machine-learning/advanced-tracing-and-evaluation-of-generative-ai-agents-using-langchain-and-amazon-sagemaker-ai-mlflow/)
 - [MLflow Evaluation with SageMaker Jobs and Bedrock LLM-as-a-Judge](https://builder.aws.com/content/31vda6VY2m5U9xZMOhKQR3IMFkP/mlflow-evaluation-with-sagemaker-jobs-and-bedrock-llm-as-a-judge)
+- [RAGAS in MLflow](https://mlflow.org/docs/latest/genai/eval-monitor/scorers/third-party/ragas/)
+- [Introducing DeepEval, RAGAS, and Phoenix Judges in MLflow](https://mlflow.org/blog/third-party-scorers/)
+- [Evaluate Amazon Bedrock Agents with Ragas and LLM-as-a-judge](https://aws.amazon.com/blogs/machine-learning/evaluate-amazon-bedrock-agents-with-ragas-and-llm-as-a-judge/)
+- [Evaluate RAG responses with Amazon Bedrock, LlamaIndex and RAGAS](https://aws.amazon.com/blogs/machine-learning/evaluate-rag-responses-with-amazon-bedrock-llamaindex-and-ragas/)
