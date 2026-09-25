@@ -50,3 +50,15 @@ Model output = baseline + attribution(feature) + attribution(feature2) + attribu
 ## Cooperative Game Theory
 
 
+
+---
+# Resources/References
+- [AI Explainability in 2026: Tools, Techniques, and Frameworks to Build Transparent AI Systems](https://futureagi.com/blog/ai-explainability-tools-techniques-2025/)
+
+
+
+---
+# Papers
+- [AgentSHAP: Interpreting LLM Agent Tool Importance with Monte Carlo Shapley Value Estimation](https://arxiv.org/html/2512.12597v1)
+- [From Features to Actions: Explainability in Traditional and Agentic AI Systems](https://arxiv.org/abs/2602.06841)
+- [Understanding and Optimizing Agentic Workflows via Shapley value](https://arxiv.org/html/2502.00510v3)
