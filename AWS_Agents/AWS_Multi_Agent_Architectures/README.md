@@ -8,3 +8,23 @@
 
 <img width="847" height="478" alt="Screenshot 2026-10-01 141353" src="https://github.com/user-attachments/assets/7d3de625-ec7d-4f8a-852f-bf54f431e88c" />
 
+
+---
+# Why do you need multi-agents -- case for collaborative AI systems
+- There are 4 important "triggers" to consider when to move from a single-agent system to a multi-agentic system:
+
+1. **Context Saturation**
+   - COMPLEX long-horizon tasks that overflow a single context window.
+   - Agent often forgets work it did earlier but does not know it has.
+
+2. **Task specialization**
+   - 1 agent is trying to excel at multiple things AT THE SAME TIME: 
+     - a) Security
+     - b) Infrastructure-as-code (IaC)
+     - c) CI/CD
+
+  - This leads to mediocre answers/responses and results rather than specific domain excellence.
+
+
+3. **Latency and Parallelism**
+   - 
