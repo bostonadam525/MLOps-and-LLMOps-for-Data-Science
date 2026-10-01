@@ -27,4 +27,42 @@
 
 
 3. **Latency and Parallelism**
-   - 
+   - Sequential task execution is SLOW and/or delayed.
+   - Independent subtasks (e.g. security audits, cost estimates, compliance checks) -- RUN IN PARALLEL to avoid delays!
+
+4. **Fault Isolation**
+   - Single-agent system derails ENTIRE workflow.
+   - Multi-agent systems localize failures --> 1 agent not working does not hinder the rest of the system.
+
+5. **RULE OF THUMB**
+   - Move to multi-agent systems when a single-agent workflow shows any 2 of these 4 triggers at the SAME TIME.
+
+---
+# Multi-Agent Systems -- Anatomy
+- Every Multi-Agent system regardless of the purpose or number of agents is organized around these 4 planes below.
+- If you don't include these 4 planes it will make it difficult to debug and trace your system. 
+
+1. **Control Plane** -- orchestration
+   - **KEY: Orchestrator directs, it DOES NOT execute. If you delegate tasks beyond orchestration to an orchestrator it is asking for trouble.**
+2. **Execution Plane** -- specialized agents
+   - **KEY: Independence is the key here. Think of "microservices" but for Agents.**
+3. **State Plane** -- shared memory
+   - **KEY: Shared memory, information, and augmented knowledge shared among agents.**
+4. **Capability plane** -- Tools and MCP
+
+<img width="790" height="417" alt="Screenshot 2026-10-01 152958" src="https://github.com/user-attachments/assets/cfb8b25f-9fb9-4322-af86-09a3b1465703" />
+
+
+---
+# 4 Orchestration Patterns for Multi-Agents
+1. **Centralized Orchestration**
+2. **Skill-based dispatch**
+3. **Handoff chains**
+4. **Parallel fan-out and synthesis**
+
+<img width="760" height="432" alt="Screenshot 2026-10-01 153734" src="https://github.com/user-attachments/assets/2a606f70-905b-41a0-99ba-7c647b2ee259" />
+
+
+
+
+
