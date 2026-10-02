@@ -47,5 +47,47 @@
 - Name S3 bucket --> in AWS each bucket needs to be globally unique
 - Create stack
 - Make sure S3 bucket exists via "Outputs" column.
+- CloudFormation creates IAM role automatically for you given the YAML file input.
+  - Go to IAM --> Roles --> Policy attached
+
+### Data access in S3
+- S3 bucket needs data so go to S3 --> Create folders for data:
+  - Name folder (e.g. rawData)
+  - Create Folder
+- Upload data to `rawData` folder or other data folders.
+
+---
+# AWS Glue Data Catalog
+- **Purpose: Persistent Metadata Store for ANY data you have stored in any data source in AWS**
+- **Examples of Metadata you can store:**
+  - Data location
+  - Schema
+  - Data types
+  - Data classification
+- **What it does:**
+  - Managed service that lets you store, annotate, and share metadata which can be used to query and transform your data.
+  - **Lets you perform ETL on any data type using this persistent metadata store.***
+  - **DOES NOT STORE ACTUAL DATA, ONLY METADATA OR REFERENCE INFORMATION required to get to the data that you have stored in AWS.**
+  - There is ONE AWS Glue Data Catalog per AWS region.
+  - IAM policies role access control.
+  - Data governance
+
+---
+# AWS Glue Databases
+- Set of associated Glue Data Catalog table definitions organized into logical groups.
+
+---
+# How AWS Glue Supports RAG and Agents
+- **Central Lineage Registry:** Register your knowledge base source documents as tables in the AWS Glue Data Catalog using automatic crawlers to track data provenance, extraction methods, and audit trails
+- **Metadata Filtering:** Combine structured metadata from Glue with vector embeddings (stored in Amazon OpenSearch or Aurora) so your RAG agents retrieve operationally correct context rather than just matching text similarity.
+- **Automated Enrichment:** Use foundation models via Amazon Bedrock to generate clean JSON table and column descriptions automatically, updating your Glue catalog via API to improve agent discoverability.
+- **Auditing via Athena:** Query your retrieval logs and data lineage seamlessly using Amazon Athena joined against your Glue metadata tables without writing custom application code
 
 
+---
+# Resources
+- [AWS Glue Cheat sheet](https://tutorialsdojo.com/aws-glue/)
+- [AWS Glue Architecture from S3](https://docs.aws.amazon.com/prescriptive-guidance/latest/spark-tuning-glue-emr/architecture.html)
+- [Creating AWS Glue Databases](https://docs.aws.amazon.com/glue/latest/dg/define-database.html)
+- [Capability 3. Providing secure access to data and systems for generative AI](https://docs.aws.amazon.com/prescriptive-guidance/latest/security-reference-architecture-generative-ai/gen-ai-agents.html)
+- [The essential guide to building a data foundation for agentic AI](https://aws.amazon.com/data/resources/data-foundation-for-agentic-ai/)
