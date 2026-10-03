@@ -83,6 +83,120 @@
 - **Automated Enrichment:** Use foundation models via Amazon Bedrock to generate clean JSON table and column descriptions automatically, updating your Glue catalog via API to improve agent discoverability.
 - **Auditing via Athena:** Query your retrieval logs and data lineage seamlessly using Amazon Athena joined against your Glue metadata tables without writing custom application code
 
+---
+# How to Create Database in AWS Glue
+- Go to Data Catalog --> Databases
+- Name Database
+- Use location link (e.g. S3 URI link)
+- Create Database (done)
+
+---
+# AWS Glue Tables
+- Metadata definition that represents your data!
+- Data resides in its original store.
+- **Representation of data schema -- thats it, its not the actual data itself.**
+
+## Creating Glue Tables -- Manual
+- Go to Tables on side bar under **Data Catalog --> Databases**
+- **Add Table**
+- Name table(s)
+- Choose table format: Standard vs. Apache Iceberg
+- Select Datastore: S3, kinesis, kafka
+- account --> if choosing "my account" need S3 URI
+- Select data type (e.g. CSV, JSON)
+- Customize schema and dtypes
+
+## Creating Glue Tables -- Crawlers
+- Left hand menu select
+- **Create Crawler**
+- Name crawler
+- Add data source --> S3 URI link
+- Crawl all sub-folders
+- Add S3 source
+- Select IAM role
+- Select Target Database
+- Select Crawler Schedule (e.g. on-demand, hourly, etc.)
+- Create Crawler
+- **Run Crawler**
+- **Check Tables to make sure it populated and is correct schemas**
+
+---
+# Partitions in AWS
+- Folders where data is stored in S3 which are physical entities mapped to partitions which are logical entities
+- e.g. Columns in a Glue Table
+- **Important way to speed up queries**
+
+---
+# AWS Glue Connetions
+- Data Catalog object that contains properties that are required to connect to a specific data store in AWS.
+- Easily accessible on sidebar.
+
+---
+# AWS Glue ETL 
+- Supports data extraction from numerous sources.
+- Transforms data to your specific business requirements.
+- Loads into destination of choice.
+
+---
+## Visual ETL in Glue
+- This is a good way to map out your ETL process. Under the hood it will create a code script if you want to modify or use it in the future.
+- **Visual ETL process:**
+  - Name job
+  - Edit Job details --> IAM role (make sure populates)
+  - Advanced config
+    - Browse for Script location for S3
+    - Browse for Script Path for S3 --> add `/logs/`
+    - Browse for Temporary Path --> TempDir
+    - Set **Requested number of workers** --> 2 to 10 or whichever matches your data
+  - Save job
+ 
+### 1. Add ETL nodes
+
+<img width="1163" height="488" alt="Screenshot 2026-10-03 094756" src="https://github.com/user-attachments/assets/165ec66b-8375-439a-853a-172fdb29bd31" />
+
+
+### 2. Add Transform
+- Add current timestamp
+
+
+### 3. Add Target
+- File type: Parquet
+- Compression type: Snappy
+- S3 process location: processed data folder in your S3 bucket --> add tag to name target
+- Create a table in the Data Catalog and on subsequent runs, update the schema and add new partitions
+- Select Database
+- Name Database table
+- Add partition key (e.g. timestamp transformation)
+
+### 4. Save job
+- save your ETL job!
+
+
+---
+# AWS Glue ETL Engine
+- Apache Spark engine to distribute BIG DATA workloads across worker nodes (similar to Databricks)
+- Also supports Python, but SPARK is preferred.
+
+---
+# AWS Glue DPUs
+- 1 DPU is equal to 4 vCPUs and 16 GB of memory.
+- Rules of thumb:
+  - Not enough DPUs and system will crash.
+  - Too many DPUs and cost will skyrocket.
+- Use console to monitor provisions of DPUs.
+
+---
+# AWS Glue Bookmarks
+- This tracks data that has already been processed during previous runs of ETL jobs by persisting state information from job run.
+- When new data arrives --> can process new data without disrupting previous data. 
+  
+
+---
+# AWS Glue Crawlers
+- Connects to a data store (e.g. source or target)
+- Progresses through prioritized list of classifiers to **determine schema of your data --> Creates metadata tables in AWS Glue Data Catalog**
+- Removes burden of how to manually create a schema if you have a lot of tables -- but have ability to manually edit or create them yourself. 
+
 
 ---
 # Resources
