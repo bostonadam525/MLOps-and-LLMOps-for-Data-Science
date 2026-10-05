@@ -171,6 +171,33 @@
 ### 4. Save job
 - save your ETL job!
 
+### 5. Run Job
+- Go to Runs
+- Run Job
+
+### 6. Athena Query
+- You can query this data now in Athena
+- Go to Athena console
+- Select table and run queries. 
+
+---
+# AWS Glue Data Quality
+- Monitor the quality of your data by Data Quality Definition Language (DQDL) using DeeQu (open source project).
+- Can perform Data Governance and quality checks on your data and ETL data.
+- [AWS Measure and Monitor Quality of Datasets](https://www.youtube.com/watch?v=rK1NGQu4Sgg)
+
+## How to use Glue Data Quality
+- Go to Data Catalog
+- Go to Tables --> select table
+- Run history --> gives you overview of data history on this table including:
+  - Evaluation Runs
+  - Recommendation Runs
+
+## Create Recommended Data Quality Rules
+- Open up Create Rules
+- IAM role set
+- Automate "Recommend Rules" via AWS Glue engine
+- Once the rules are generated --> copy the DQDL code in the run
 
 ---
 # AWS Glue ETL Engine
