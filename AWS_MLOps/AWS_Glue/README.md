@@ -198,6 +198,58 @@
 - IAM role set
 - Automate "Recommend Rules" via AWS Glue engine
 - Once the rules are generated --> copy the DQDL code in the run
+- Go back and place them in the RuleSet engine box.
+- Edit rules manually.
+
+---
+# AWS Glue Scheduling
+- **3 Very common Tools used for scheduling Glue jobs:**
+  - Apache Airflow --> better for EMR, ATHENA
+  - AWS Step Functions
+  - Amazon Event Bridge
+- **But as we see below, AWS Glue Workflows are fine if you are only using Glue.*
+
+
+## AWS Glue Triggers
+- initiates or kicks off an ETL or Crawler Job.
+- Triggers can be defined based on schedule times or events.
+
+## AWS Glue Workflow
+- Create and visualize complex extract, transform, load (ETL) activities involving multiple crawlers, jobs, triggers.
+- **Only really useful if you are solely using GLUE. If you are using AWS EMR or Athena you should consider something else such as APACHE AIRFLOW for managed workflows.**
+
+### How to Create AWS Glue Orchestration Workflow
+- Go to Data Integration and ETL in Glue
+- Go to Workflows (Orchestration)
+- Add workflow
+- This is where you need to add custom settings:
+  - Add Trigger --> if there are not established triggers you need to create them --> add crawler or job. 
+
+### How to Create Triggers
+- Go to Triggers
+- Add Trigger
+- Name trigger, on-demand (or other)
+- Add resource type
+- Select Crawler or Job
+- Add crawler
+- Then go back to Orchestration setup and add the Trigger Crawler.
+- You can create custom orchestration graphs such as this:
+
+<img width="1126" height="498" alt="Screenshot 2026-10-05 094648" src="https://github.com/user-attachments/assets/8953818e-f01c-4707-b9d4-a182df33d5c0" />
+
+---
+# AWS Glue Data Brew
+- Visual data preparation tool.
+- Makes it easier for Data Analysts + Data Scientists to clean and normalize data (no-code if you need a quick way to look at data before you write code -- not a good idea to put this into production -- but can really help you map out your code and processes to understand the process.
+- Glue DataBrew is a separate managed service in AWS.
+- **NOT IDEAL FOR CI/CD PIPELINES**
+- This is basically an excel table in Glue for no-code EDA and exploration.
+- Can mess around with your data such as:
+  - Explore schemas
+  - Visualize
+  - Data cleaning
+- **Not ideal, more ideal is using Spark in Glue or using SageMaker Unified Studio which does this with code.**
+
 
 ---
 # AWS Glue ETL Engine
