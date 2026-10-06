@@ -66,12 +66,18 @@
   2. Model server (containers)
      - orchestrator to load model into memory
      - handle concurrent requests
-     - protocol between client + endpoint hardware
-     - Examples: Triton, TorchServe, DJL serving (AWS), TGI
+     - this is the protocol between client + model endpoint hardware
+     - Example servers: Triton (NVIDIA), TorchServe, DJL serving (AWS), TGI
 
+## JumpStart
+- Abstracts out HARDWARE + CONTAINER
+- Example:
+  - Model: Llama-3-8b
+  - Optimal configuration provided by Sagemaker
+  - Benchmarks configured by Sagemaker
+- **NOT SERVERLESS this is REAL-TIME inference** --> still deploys on instance (pre-selected for you) -- can change this (flexible)
 
 
 ---
 # Resources
 - [Sagemaker crash course](https://www.youtube.com/watch?v=pSu-aVC7UCw&list=PLThJtS7RDkOchq0_dwjQkzzb5idzOxN7l)
-- 
