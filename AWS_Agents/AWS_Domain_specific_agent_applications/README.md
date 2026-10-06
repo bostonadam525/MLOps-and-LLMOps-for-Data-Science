@@ -155,7 +155,7 @@
     
 4. **Chunking strategies by document type**
 
-|--- | --- | 
+|--- | --- | ---|
 |Document Type| Strategy | Why |
 |Narrative/policy docs | semantic chunking at paragraph or section boundaries | preserves complete, self-contained statements|
 |Structured data (catalog, routes, configs)| record-level chunks (1 record = 1 chunk) | product A chunks never contaminate with product B data |
