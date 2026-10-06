@@ -77,6 +77,14 @@
   - Benchmarks configured by Sagemaker
 - **NOT SERVERLESS this is REAL-TIME inference** --> still deploys on instance (pre-selected for you) -- can change this (flexible)
 
+### JumpStart SDK Options
+- **boto3**
+  - Purpose: The official, comprehensive AWS SDK to control 100% of the APIs for every AWS service (S3, EC2, Lambda, and raw SageMaker API calls)
+  - Best Use Case: Production infrastructure automation, general cloud management, and tasks outside of machine learning
+- **SageMaker Python SDK (JumpStart & ML Workflows)**
+  - Purpose: Built specifically to simplify machine learning experimentation, model training, and deployment on SageMaker
+  - Best Use Case: data science notebooks and ML development.
+
 
 ---
 # Resources
