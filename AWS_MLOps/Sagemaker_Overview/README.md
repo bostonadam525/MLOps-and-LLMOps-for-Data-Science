@@ -85,6 +85,40 @@
   - Purpose: Built specifically to simplify machine learning experimentation, model training, and deployment on SageMaker
   - Best Use Case: data science notebooks and ML development.
 
+---
+# Containers on SageMaker
+- Allows you to port a lightweight software package with all code, dependencies and configurations and execute it anywhere.
+- Portable, lightweight
+- if you containerize packages you use such as torch, spacy, nltk
+
+## Terms
+1. Container
+   - Instance of image.
+2. Image
+   - blueprint or instructions of how to execute code.
+   - Dockerfile --> code, dependencies, configs
+   - Build Dockerfile --> Docker images
+   - Repositories on AWS: Elastic Container Registry (host it)
+   - Services such as SageMaker are direct examples of ECR
+
+3. kubernetes
+   - allows you to scale 100s and 1000s of docker images.
+
+## Sagemaker Managed ML Service
+- Provides lists of managed deep learning containers and exposes these publicly as docker image runtimes so you can use all available packages for training and inference. 
+- including: Torch, TensorFlow, HuggingFace, TGI
+- Available images: https://aws.github.io/deep-learning-containers/reference/available_images/
+
+## Bring your own container (BYOC)
+- Use the Sagemaker managed containers if it has what you need.
+- BYOC if what you need is unsupported --> Build your own image --> push to ECR which has your own app code/dependencies/docker image --> Sagemaker
+- [Build Your Own Container for SageMaker AI Multi-Model Endpoints](
+https://docs.aws.amazon.com/sagemaker/latest/dg/build-multi-model-build-container.html)
+- [Adapt your own inference container for Amazon SageMaker AI](https://docs.aws.amazon.com/sagemaker/latest/dg/adapt-inference-container.html)
+- Things to consider:
+  - have to expose your own port
+  - use your own scripts
+
 
 ---
 # Resources
