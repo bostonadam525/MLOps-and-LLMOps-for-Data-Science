@@ -44,6 +44,17 @@
     * Need to access the `API request` code.
 
 ---
+# Flows
+- Orchestration of various components:
+  - agents
+  - prompts | prompt templates
+  - knowledge bases
+  - ..etc.
+
+- UI to create custom FLOWS
+- Fully managed, serverless
+
+---
 # Resources
 - [Amazon SageMaker JumpStart Industry: Financial](https://docs.aws.amazon.com/sagemaker/latest/dg/studio-jumpstart-industry.html)
 - [Process multi-page documents with human review using Amazon Bedrock Data Automation and Amazon SageMaker AI](https://aws.amazon.com/blogs/machine-learning/process-multi-page-documents-with-human-review-using-amazon-bedrock-data-automation-and-amazon-sagemaker-ai/)
