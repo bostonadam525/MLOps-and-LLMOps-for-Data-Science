@@ -47,8 +47,12 @@
 
 
 1. **What the Agent will do**
+
 <img width="934" height="366" alt="Screenshot 2026-10-09 105318" src="https://github.com/user-attachments/assets/ce220741-5f38-40bf-a768-33ab69f22355" />
 
+
+<br>
+<br>
 
 2. **What the user will do**
 <img width="893" height="341" alt="Screenshot 2026-10-09 105413" src="https://github.com/user-attachments/assets/2a6be925-5f49-4eaa-8c98-a644c1b219de" />
