@@ -69,6 +69,71 @@
 <img width="893" height="341" alt="Screenshot 2026-10-09 105413" src="https://github.com/user-attachments/assets/2a6be925-5f49-4eaa-8c98-a644c1b219de" />
 
 
+---
+# Step 4 - Errors & Failures -- What could go wrong?
+- Feeds into:
+
+```
+- Automate vs. Augment
+- Guardrails
+- Evaluation
+```
+
+- Here the premise is: 
+  - Determine what can go wrong, why and how?
+  - Identify & Cluster the errors!!
+ 
+---
+# Step 5 - Agentic Design Pattern -- Which Pattern(s) fit the use case? 
+- Example Agentic patterns to consider:
+
+```
+- Reflection
+- Tool use
+- ReAct
+- Planning
+- Multi-agent
+
+```
+
+---
+# Step 6 - Reality Check -- Can we actually build it? 
+- This came from the Google design playbook. 
+- Here we need to look at such things as:
+
+```
+1. Data
+2. Tools
+3. Systems
+4. Technical Feasability
+
+
+```
+
+---
+# Step 7 - Agentic Solution Fit Evaluation -- Is it worth building?
+- Define tradeoffs is ROI worth it?
+
+
+---
+# Step 8 & 9 -- Success & Evaluation
+- **What does success mean?**
+- **How will we evaluate it?**
+- Things to consider:
+  - Commercial success
+  - Product success
+  - AI quality
+
+
+---
+# Step 10 - Prototype
+- Make concept tangible
+- Concept established:
+  - Usability testing
+  - Stakeholder alignment
+  - Investment discussion
+
+
 
 
 
