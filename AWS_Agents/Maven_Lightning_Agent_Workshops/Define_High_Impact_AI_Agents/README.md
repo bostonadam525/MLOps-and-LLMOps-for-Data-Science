@@ -16,4 +16,4 @@
 
 |01 - Opportunity Mapping -> | 02 - Concept Development -> | 03 - Solution Fit Assessment -> | 04 - Success & Eval Framework -> | 05 - Prototype & Validate |
 |---|---|---|---|---|
-|- Identify opportunity & Use cases - Map Current user journey |
+|- Identify opportunity & Use cases <br> - Map Current user journey |
