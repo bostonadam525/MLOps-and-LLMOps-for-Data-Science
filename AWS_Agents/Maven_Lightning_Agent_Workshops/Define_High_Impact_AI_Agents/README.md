@@ -25,12 +25,34 @@
 - This is a very common use case across all domains and companies.
 - Companies want to use social media for sophisticated marketing campaigns --> into agentic workflows
 - **Amir uses Miro boards for mapping this first.**
+
+## Step 1 - Mapping Current-as-is workflow + Pain Points
   - **The goal should be to map current workflows or user journeys STEP BY STEP before building anything!**
   - **You don't start with AI from scratch or it will fail out of the box.**
   - Its important to make not of repetitive tasks and loops, pain points.
 - This is an example of completed use journey mapping by Amir:
 
 <img width="879" height="496" alt="Screenshot 2026-10-09 104431" src="https://github.com/user-attachments/assets/7704a777-1bf7-4d2f-9e6b-ac189feabfee" />
+
+- **Notes about above:**
+  - No AI yet....thats important!
+  - The nature of the use case is most important to understand.
+  - What is the friction, pain points, and more? 
+
+## Step 2 - Design to-be AI agent workflow
+- This uses the same journey mapping above but now implemented as agentic system proposal.
+- Amir uses a template that sits below the journey mapping template but with slightly different components.
+- What we see below are 2 separate sections: **What the Agent will do** vs. **What the user will do**
+- What you might see is that AI is not needed in every step....
+
+
+1. **What the Agent will do**
+<img width="934" height="366" alt="Screenshot 2026-10-09 105318" src="https://github.com/user-attachments/assets/ce220741-5f38-40bf-a768-33ab69f22355" />
+
+
+2. **What the user will do**
+<img width="893" height="341" alt="Screenshot 2026-10-09 105413" src="https://github.com/user-attachments/assets/2a6be925-5f49-4eaa-8c98-a644c1b219de" />
+
 
 
 
