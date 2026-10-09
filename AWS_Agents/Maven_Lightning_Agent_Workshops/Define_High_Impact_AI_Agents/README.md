@@ -16,4 +16,4 @@
 
 |01 - Opportunity Mapping -> | 02 - Concept Development -> | 03 - Solution Fit Assessment -> | 04 - Success & Eval Framework -> | 05 - Prototype & Validate |
 |---|---|---|---|---|
-|- Identify opportunity & Use cases <br> - Map Current user journey |
+|- Identify opportunity & Use cases <br> - Map Current user journey | - Map AI Agent-enabled User Journey <br> - Identify & Cluster Potential Errors & Failures <br> - Define Agent Design Pattern | - Reality Check (Data, Tools, feasability) <br> - Agentic Solution Fit Evaluation | - Define Success Metrics <br> - Define Eval Framework | - Build clickable prototype & validate concepts|
