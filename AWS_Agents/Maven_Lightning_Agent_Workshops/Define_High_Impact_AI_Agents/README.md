@@ -18,6 +18,12 @@
 |---|---|---|---|---|
 |- Identify opportunity & Use cases <br> - Map Current user journey | - Map AI Agent-enabled User Journey <br> - Identify & Cluster Potential Errors & Failures <br> - Define Agent Design Pattern | - Reality Check (Data, Tools, feasability) <br> - Agentic Solution Fit Evaluation | - Define Success Metrics <br> - Define Eval Framework | - Build clickable prototype & validate concepts|
 
+---
+# Another Approach to Planning
+- This is another framework he shared:
+
+<img width="661" height="276" alt="Screenshot 2026-10-09 110840" src="https://github.com/user-attachments/assets/a899a146-0bbc-4587-94c5-debde37effb4" />
+
 
 ---
 # From Current Workflow to AI Agent-Empowered Workflow
@@ -43,7 +49,12 @@
 - This uses the same journey mapping above but now implemented as agentic system proposal.
 - Amir uses a template that sits below the journey mapping template but with slightly different components.
 - What we see below are 2 separate sections: **What the Agent will do** vs. **What the user will do**
-- What you might see is that AI is not needed in every step....
+- **What you might see is that AI or Agents are not needed in every step.*
+- Details are important including
+  - Edge cases
+  - Data sources
+  - Input, Output
+  - ...etc...
 
 
 1. **What the User will do**
