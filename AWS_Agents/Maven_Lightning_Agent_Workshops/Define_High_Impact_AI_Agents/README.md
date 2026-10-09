@@ -54,7 +54,7 @@
 <br>
 <br>
 
-2. **What the Agent will do**
+2. **What the Agent will do** 
 <img width="893" height="341" alt="Screenshot 2026-10-09 105413" src="https://github.com/user-attachments/assets/2a6be925-5f49-4eaa-8c98-a644c1b219de" />
 
 
