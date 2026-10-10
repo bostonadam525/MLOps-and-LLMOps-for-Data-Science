@@ -218,6 +218,89 @@ Name the file
 ---
 # Bedrock RAG Evaluations
 
+## Specific Challenges with RAG Evals
+- Need relevant data from your knowledge base (documents)
+- Retrieve the right context from documents
+- Generate a correct, complete, and grounded answer minimizing hallucinations and fabrications
+- Iteratively improve your RAG system and compare across changes
+- Evaluate biases, safety, trust
+
+## Bedrock RAG Evaluations - Overview
+- Eval your full RAG stack to optimize your app, including any app hosted anywhere.
+- You can:
+
+1. **Bring your own datasets for custom results.**
+2. **Eval retrieval ALONE or retrieval + generation with LLM-as-a-judge of your choice.**
+3. **Built-in-metrics for:**
+   - quality
+   - responsible AI
+   - custom metric creation
+   - also compatible with Amazon Bedrock Guardrails
+  
+4. **Compare across multiple evaluation jobs, runs, traces**
+5. **Evaluate any RAG system hosted anywhere**
+6. **AB testing, regression testing**
+
+---
+## RAG Evaluation Metrics - Breakdown
+1. **Retrieval**
+   - Context coverage (similar to precision)
+   - Context relevance (similar to recall)
+  
+2. **Retrieval + Generation**
+   - Correctness
+   - Completeness
+   - Helpfulness
+   - Citation precision
+   - Citation coverage
+   - Logical coherence -> hallucination detection
+   - Faithfulness --> hallucination detection
+
+3. **Responsible AI**
+   - Harmfulness
+   - Stereotyping
+   - Refusal
+   
+---
+# Workflow for RAG Evals
+
+## 1. Choose LLM-as-a-judge
+- foundation model vs. open model
+
+## 2. Select Inference source
+- Bedrock knowledge base vs. Bring your own inference source
+
+## 3. Evaluation type
+- Retrieval + Response generation or
+- Retrieval only
+
+## 4. Metric selection
+- **7 quality metrics**
+  - Helpfulness
+  - Logical coherence
+  - Completeness
+  - Citation coverage
+  - Citation precision
+  - Correctness
+  - Faithfulness
+ 
+- **3 Responsible AI metrics**
+  - Harmfulness
+  - Stereotyping
+  - Refusal
+
+- **Custom metrics**
+  - Define your own
+
+## 5. Evaluation Dataset
+- Prompt
+
+## 6. IAM role
+
+---
+## Review RAG traces
+- Scores are normalized between 0 to 1
+
 
 ---
 # Resources
