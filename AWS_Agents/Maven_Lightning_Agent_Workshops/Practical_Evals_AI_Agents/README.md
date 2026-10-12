@@ -72,6 +72,10 @@
 
 ## 3. The Evaluator = The check used to decide good vs. bad
 - **This is crucial**
+- What we see below is that there are 3 types of evaluators:
+  - Fixed rule evaluation (code logic)
+  - LLM-as-judge
+  - Human annotation + in the loop feedback
 - The flow:
 
 ```
@@ -80,3 +84,40 @@ When to Use       | 1 correct answer or exact value |Open-ended qualities with c
 
 
 ```
+- Rubric evaluations are not a bad idea:
+  - binary vs. multi-label vs. multi-class
+  - threshold (passing score)
+ 
+---
+## 4. Metrics = Show how the Agent performed across the dataset
+1. **Overall Results**
+  - the overall result does not show whether the Agent performs consistently across every kind of request.
+
+2. **Segmented Results**
+   - Breakdown by percent, example:
+
+```
+Deliveries: 96%
+Damaged products: 92%
+Account issues: 94%
+Refunds: 78%
+
+```
+
+---
+# The Process of Evaluations
+1. Create Dataset with INPUT & OUTPUT --> can build this over time with user input (user data)
+2. Create Evaluator with a threshold (need to calibrate this over time) --> threshold establishes standard
+3. Trust the evaluator with the dataset
+4. Run The Agent & The Evaluator against the dataset --> get a baseline
+5. Identify the Problems
+6. Fix ONE thing (start small, iterate)
+7. Re-run
+8. Compare re-run against baseline AND Document it --> iterate on process
+
+
+
+---
+# Resources
+- [PromptFoo](https://www.promptfoo.dev/)
+- 
