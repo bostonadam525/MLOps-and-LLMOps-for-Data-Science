@@ -31,7 +31,7 @@
 
 ---
 # What Can We Evaluate?
-- **One thing at a time!**
+- **One thing at a time, per agent, per system, per loop**
 
 1. **Precision (Quality)**
    - example: If agent moves 10 emails to your spam folder, how many of those 10 are actually spam?
@@ -44,3 +44,39 @@
 
 4. **Cost (Price)**
    - What is the $$$ to get a response from the system?
+  
+---
+# What is the error rate of an agent's response?
+- We need to config, optimize, and test an acceptable baseline.
+- The error rate we determine is equal to or less than this baseline (e.g. <= 5%)
+
+---
+# The 4 Parts of an Evaluation Framework
+
+## 1. The Dataset = A Collection of test cases
+- Can be synthetic -- not ideal to real world data
+- Most ideal --> client, domain, user data with real-world examples/cases
+- Dataset composition:
+  - input
+  - response (expected behavior, expected category -- e.g. prompts, instructions)
+  - JSON structure
+
+- **Key: Quality over Quantity**
+  - You are not setting up the agent for success, your goal is to set it up for failure (e.g. edge cases), as real-world data is never static.
+
+## 2. The Model = The LLM (large language model)
+- The flow:
+  - 1) User input (request supplied to model)
+    2) LLM (model processes the input)
+    3) Response (generated output)
+
+## 3. The Evaluator = The check used to decide good vs. bad
+- **This is crucial**
+- The flow:
+
+```
+Type of Evaluator | Fixed Rule Evaluator            |LLM As A Judge                         | Human Annotation
+When to Use       | 1 correct answer or exact value |Open-ended qualities with clear rubric |Nuance, Ambiguous, high-impact cases
+
+
+```
